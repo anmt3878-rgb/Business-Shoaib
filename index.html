@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Shoaib | Web & AI Developer. Websites, AI tools, automation, SaaS platforms and custom business solutions.">
+<meta name="keywords" content="Web Developer, AI Developer, AI Automation, SaaS, Business Websites, Web Applications">
+<meta name="author" content="Shoaib">
+
+<title>Shoaib | Web & AI Developer</title>
+
+<style>
+:root{
+    --bg:#070a12;
+    --card:#101522;
+    --card2:#151b2b;
+    --text:#f5f7ff;
+    --muted:#a9b1c5;
+    --line:rgba(255,255,255,.09);
+    --accent:#6c63ff;
+    --accent2:#00d4ff;
+    --success:#25d366;
+    --max:1180px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%,rgba(108,99,255,.16),transparent 30%),
+        radial-gradient(circle at 90% 20%,rgba(0,212,255,.10),transparent 30%),
+        var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:min(92%,var(--max));
+    margin:auto;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,10,18,.82);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--line);
+}
+
+.nav{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:800;
+    letter-spacing:.5px;
+}
+
+.logo span{
+    color:var(--accent2);
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:var(--muted);
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#fff;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:120px 0 70px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:60px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.04);
+    border-radius:50px;
+    color:#cbd2e5;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(42px,7vw,78px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    margin-bottom:22px;
+}
+
+.gradient{
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    max-width:680px;
+    color:var(--muted);
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:13px;
+}
+
+.btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    padding:13px 20px;
+    border-radius:12px;
+    font-weight:700;
+    border:1px solid var(--line);
+    transition:.3s;
+    cursor:pointer;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,var(--accent),#4d8cff);
+    border:none;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    background:rgba(255,255,255,.04);
+}
+
+.btn-whatsapp{
+    background:rgba(37,211,102,.12);
+    border-color:rgba(37,211,102,.3);
+    color:#75ed9d;
+}
+
+.hero-card{
+    padding:30px;
+    border:1px solid var(--line);
+    border-radius:25px;
+    background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
+    box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+
+.profile-circle{
+    width:125px;
+    height:125px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto 22px;
+    font-size:40px;
+    font-weight:900;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+}
+
+.hero-card h3{
+    text-align:center;
+    margin-bottom:5px;
+}
+
+.hero-card p{
+    text-align:center;
+    font-size:14px;
+    margin:0;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:25px;
+}
+
+.stat{
+    text-align:center;
+    padding:14px 8px;
+    background:rgba(255,255,255,.04);
+    border-radius:14px;
+}
+
+.stat strong{
+    display:block;
+    font-size:21px;
+}
+
+.stat span{
+    font-size:11px;
+    color:var(--muted);
+}
+
+section{
+    padding:95px 0;
+}
+
+.section-title{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 45px;
+}
+
+.section-title h2{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.section-title p{
+    color:var(--muted);
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,.04);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:28px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(108,99,255,.4);
+}
+
+.card h3{
+    margin-bottom:12px;
+}
+
+.card p{
+    color:var(--muted);
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-top:20px;
+}
+
+.skill{
+    padding:8px 12px;
+    background:rgba(255,255,255,.06);
+    border:1px solid var(--line);
+    border-radius:9px;
+    font-size:13px;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.service{
+    min-height:210px;
+}
+
+.icon{
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:14px;
+    background:rgba(108,99,255,.14);
+    font-size:23px;
+    margin-bottom:20px;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.project{
+    overflow:hidden;
+}
+
+.project-top{
+    height:190px;
+    border-radius:15px;
+    background:
+        linear-gradient(135deg,rgba(108,99,255,.4),rgba(0,212,255,.16)),
+        #111827;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    font-weight:800;
+    margin-bottom:22px;
+}
+
+.project p{
+    margin-bottom:18px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-bottom:20px;
+}
+
+.tag{
+    color:#bfc7dc;
+    font-size:12px;
+    padding:5px 9px;
+    border-radius:7px;
+    background:rgba(255,255,255,.05);
+}
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.step-number{
+    font-size:35px;
+    font-weight:900;
+    color:var(--accent2);
+    margin-bottom:10px;
+}
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.price-card{
+    position:relative;
+}
+
+.price-card.featured{
+    border-color:rgba(108,99,255,.65);
+    box-shadow:0 20px 60px rgba(108,99,255,.12);
+}
+
+.price{
+    font-size:28px;
+    font-weight:800;
+    margin:15px 0;
+}
+
+.price small{
+    color:var(--muted);
+    font-size:13px;
+    font-weight:normal;
+}
+
+.price-list{
+    list-style:none;
+    margin:20px 0;
+}
+
+.price-list li{
+    padding:8px 0;
+    color:var(--muted);
+    font-size:14px;
+}
+
+.price-list li::before{
+    content:"✓ ";
+    color:#6ee7a0;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:25px;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-item{
+    padding:20px;
+    border:1px solid var(--line);
+    border-radius:15px;
+    background:rgba(255,255,255,.035);
+}
+
+.contact-item span{
+    display:block;
+    color:var(--muted);
+    font-size:13px;
+}
+
+.contact-item strong{
+    display:block;
+    margin-top:4px;
+}
+
+form{
+    display:grid;
+    gap:14px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:14px 15px;
+    background:#0b0f19;
+    border:1px solid var(--line);
+    border-radius:11px;
+    color:#fff;
+    outline:none;
+    font:inherit;
+}
+
+textarea{
+    min-height:150px;
+    resize:vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:var(--accent);
+}
+
+footer{
+    padding:35px 0;
+    border-top:1px solid var(--line);
+    text-align:center;
+}
+
+footer p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--success);
+    color:#fff;
+    font-size:25px;
+    z-index:900;
+    box-shadow:0 12px 30px rgba(37,211,102,.25);
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:opacity .7s ease,transform .7s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:850px){
+    .nav-links{
+        position:absolute;
+        top:72px;
+        left:0;
+        width:100%;
+        display:none;
+        flex-direction:column;
+        padding:20px;
+        background:#090d16;
+        border-bottom:1px solid var(--line);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services-grid,
+    .process,
+    .pricing{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+    h1{
+        letter-spacing:-2px;
+    }
+
+    .hero{
+        padding-top:110px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    .section-title h2{
+        font-size:31px;
+    }
+
+    .services-grid,
+    .portfolio-grid,
+    .process,
+    .pricing{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+
+    .btn{
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+        <a href="#home" class="logo">Shoaib<span>.</span></a>
+
+        <div class="menu" id="menu">☰</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="container hero-grid">
+
+        <div class="reveal">
+            <div class="badge">Available for International Projects</div>
+
+            <h1>
+                I Build
+                <span class="gradient">Web & AI</span>
+                Solutions for Businesses.
+            </h1>
+
+            <p>
+                I design and develop modern websites, web applications,
+                AI tools, automation systems, dashboards and custom digital
+                solutions for businesses and organizations.
+            </p>
+
+            <div class="buttons">
+                <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Start a Project</a>
+                <a href="https://wa.me/93789155454?text=Hello%20Shoaib%2C%20I%27m%20interested%20in%20working%20with%20you." target="_blank" class="btn btn-whatsapp">
+                    WhatsApp Me
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-card reveal">
+            <div class="profile-circle">S</div>
+            <h3>Shoaib</h3>
+            <p>Web & AI Developer</p>
+
+            <div class="stats">
+                <div class="stat">
+                    <strong>Web</strong>
+                    <span>Development</span>
+                </div>
+
+                <div class="stat">
+                    <strong>AI</strong>
+                    <span>Solutions</span>
+                </div>
+
+                <div class="stat">
+                    <strong>SaaS</strong>
+                    <span>Platforms</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+
+        <div class="section-title reveal">
+            <h2>About Me</h2>
+            <p>
+                Building digital products that combine modern design,
+                technology and business value.
+            </p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="card reveal">
+                <h3>Who I Am</h3>
+                <p>
+                    I'm Shoaib, a Web & AI Developer focused on creating
+                    modern digital experiences and business-focused
+                    technology solutions.
+                </p>
+
+                <div class="skills">
+                    <span class="skill">Web Development</span>
+                    <span class="skill">AI Solutions</span>
+                    <span class="skill">Automation</span>
+                    <span class="skill">SaaS</span>
+                    <span class="skill">Dashboards</span>
+                    <span class="skill">Responsive Design</span>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <h3>My Approach</h3>
+                <p>
+                    Every project starts with understanding the business
+                    objective. I focus on clean interfaces, useful
+                    functionality, responsive experiences and scalable
+                    solutions.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+
+        <div class="section-title reveal">
+            <h2>My Services</h2>
+            <p>Digital solutions designed around your business needs.</p>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="card service reveal">
+                <div class="icon">🌐</div>
+                <h3>Business Websites</h3>
+                <p>
+                    Professional, responsive websites designed to establish
+                    your brand online and generate business opportunities.
+                </p>
+            </div>
+
+            <div class="card service reveal">
+                <div class="icon">🤖</div>
+                <h3>AI Solutions</h3>
+                <p>
+                    AI-powered tools and business experiences designed to
+                    improve productivity and customer interaction.
+                </p>
+            </div>
+
+            <div class="card service reveal">
+                <div class="icon">⚙️</div>
+                <h3>AI Automation</h3>
+                <p>
+                    Automation systems that help businesses reduce repetitive
+                    work and streamline operations.
+                </p>
+            </div>
+
+            <div class="card service reveal">
+                <div class="icon">📊</div>
+                <h3>Dashboards</h3>
+                <p>
+                    Modern management dashboards for analytics, operations,
+                    CRM and internal business workflows.
+                </p>
+            </div>
+
+            <div class="card service reveal">
+                <div class="icon">🚀</div>
+                <h3>SaaS Platforms</h3>
+                <p>
+                    Web-based software platforms with modern interfaces and
+                    business-focused functionality.
+                </p>
+            </div>
+
+            <div class="card service reveal">
+                <div class="icon">💡</div>
+                <h3>Custom Solutions</h3>
+                <p>
+                    Custom web and digital solutions built around unique
+                    business requirements.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <div class="container">
+
+        <div class="section-title reveal">
+            <h2>Selected Projects</h2>
+            <p>A selection of digital products and concepts.</p>
+        </div>
+
+        <div class="portfolio-grid">
+
+            <div class="card project reveal">
+                <div class="project-top">SHIZAZ Enterprise AI</div>
+
+                <h3>Enterprise AI Platform</h3>
+
+                <p>
+                    An enterprise-focused management platform concept
+                    combining AI automation, analytics, CRM, finance,
+                    workforce and cybersecurity.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">Enterprise</span>
+                    <span class="tag">Dashboard</span>
+                    <span class="tag">Automation</span>
+                </div>
+
+                <a href="https://anmt3878-rgb.github.io/shizaz-enterprise/" target="_blank" class="btn btn-secondary">
+                    View Project
+                </a>
+            </div>
+
+            <div class="card project reveal">
+                <div class="project-top">SHIZAZ CyberGuard</div>
+
+                <h3>Cybersecurity Platform</h3>
+
+                <p>
+                    A cybersecurity management dashboard concept for
+                    monitoring threats, incidents, endpoints,
+                    vulnerabilities and reports.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Cybersecurity</span>
+                    <span class="tag">Dashboard</span>
+                    <span class="tag">Security</span>
+                </div>
+
+                <a href="https://anmt3878-rgb.github.io/Shoaib/" target="_blank" class="btn btn-secondary">
+                    View Project
+                </a>
+            </div>
+
+            <div class="card project reveal">
+                <div class="project-top">Insurance AI</div>
+
+                <h3>Insurance AI Dashboard</h3>
+
+                <p>
+                    An insurance-focused platform concept with leads,
+                    AI conversations, scoring, follow-ups, appointments
+                    and analytics.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Insurance</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">CRM</span>
+                </div>
+
+                <a href="https://anmt3878-rgb.github.io/shizaz-enterprise/" target="_blank" class="btn btn-secondary">
+                    View Project
+                </a>
+            </div>
+
+            <div class="card project reveal">
+                <div class="project-top">Business Website</div>
+
+                <h3>Business Website</h3>
+
+                <p>
+                    A modern responsive business website concept focused on
+                    professional presentation and customer conversion.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Website</span>
+                    <span class="tag">Responsive</span>
+                    <span class="tag">Business</span>
+                </div>
+
+                <a href="https://anmt3878-rgb.github.io/Business-Website/" target="_blank" class="btn btn-secondary">
+                    View Project
+                </a>
+            </div>
+
+            <div class="card project reveal">
+                <div class="project-top">Restaurant Website</div>
+
+                <h3>Restaurant Website</h3>
+
+                <p>
+                    A restaurant website concept with a modern visual
+                    presentation for menus, services and customer engagement.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Restaurant</span>
+                    <span class="tag">Website</span>
+                    <span class="tag">UI/UX</span>
+                </div>
+
+                <a href="https://anmt3878-rgb.github.io/Restaurant-Website/" target="_blank" class="btn btn-secondary">
+                    View Project
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="process">
+    <div class="container">
+
+        <div class="section-title reveal">
+            <h2>How I Work</h2>
+            <p>A simple and professional process from idea to launch.</p>
+        </div>
+
+        <div class="process">
+
+            <div class="card reveal">
+                <div class="step-number">01</div>
+                <h3>Discovery</h3>
+                <p>
+                    Understand the business, goals, audience and project
+                    requirements.
+                </p>
+            </div>
+
+            <div class="card reveal">
+                <div class="step-number">02</div>
+                <h3>Planning</h3>
+                <p>
+                    Define the structure, features, user experience and
+                    development plan.
+                </p>
+            </div>
+
+            <div class="card reveal">
+                <div class="step-number">03</div>
+                <h3>Design</h3>
+                <p>
+                    Create a modern interface and responsive experience.
+                </p>
+            </div>
+
+            <div class="card reveal">
+                <div class="step-number">04</div>
+                <h3>Development</h3>
+                <p>
+                    Build the required website, application or digital
+                    solution.
+                </p>
+            </div>
+
+            <div class="card reveal">
+                <div class="step-number">05</div>
+                <h3>Testing</h3>
+                <p>
+                    Test responsiveness, functionality and the overall
+                    experience.
+                </p>
+            </div>
+
+            <div class="card reveal">
+                <div class="step-number">06</div>
+                <h3>Launch</h3>
+                <p>
+                    Deliver the completed project and prepare it for use.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="pricing">
+    <div class="container">
+
+        <div class="section-title reveal">
+            <h2>Project Options</h2>
+            <p>
+                Every project is different. Final pricing depends on scope,
+                features and requirements.
+            </p>
+        </div>
+
+        <div class="pricing">
+
+            <div class="card price-card reveal">
+                <h3>Business Website</h3>
+                <div class="price">Custom <small>quote</small></div>
+
+                <ul class="price-list">
+                    <li>Professional design</li>
+                    <li>Responsive layout</li>
+                    <li>Business sections</li>
+                    <li>Contact integration</li>
+                    <li>Deployment support</li>
+                </ul>
+
+                <a href="#contact" class="btn btn-secondary">Request Quote</a>
+            </div>
+
+            <div class="card price-card featured reveal">
+                <h3>Web / AI Solution</h3>
+                <div class="price">Custom <small>quote</small></div>
+
+                <ul class="price-list">
+                    <li>Custom functionality</li>
+                    <li>Modern dashboard</li>
+                    <li>AI features when required</li>
+                    <li>Business automation</li>
+                    <li>Custom integrations</li>
+                </ul>
+
+                <a href="#contact" class="btn btn-primary">Discuss Project</a>
+            </div>
+
+            <div class="card price-card reveal">
+                <h3>Enterprise</h3>
+                <div class="price">Custom <small>quote</small></div>
+
+                <ul class="price-list">
+                    <li>Large-scale platform</li>
+                    <li>Advanced dashboards</li>
+                    <li>Automation</li>
+                    <li>Custom business systems</li>
+                    <li>Project-specific architecture</li>
+                </ul>
+
+                <a href="#contact" class="btn btn-secondary">Start Discussion</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+
+        <div class="section-title reveal">
+            <h2>Let's Build Something</h2>
+            <p>
+                Have a project idea? Send the details and let's discuss
+                how it can be built.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-info reveal">
+
+                <div class="contact-item">
+                    <span>Developer</span>
+                    <strong>Shoaib | Web & AI Developer</strong>
+                </div>
+
+                <div class="contact-item">
+                    <span>WhatsApp</span>
+                    <strong>+93 789 155 454</strong>
+                </div>
+
+                <div class="contact-item">
+                    <span>Availability</span>
+                    <strong>International Projects</strong>
+                </div>
+
+                <a
+                    href="https://wa.me/93789155454?text=Hello%20Shoaib%2C%20I%27d%20like%20to%20discuss%20a%20project."
+                    target="_blank"
+                    class="btn btn-whatsapp"
+                >
+                    💬 Contact Me on WhatsApp
+                </a>
+
+            </div>
+
+            <div class="card reveal">
+
+                <form id="projectForm">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="company"
+                        placeholder="Company Name"
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                    <select id="projectType" required>
+                        <option value="">Select Project Type</option>
+                        <option>Business Website</option>
+                        <option>Web Application</option>
+                        <option>AI Solution</option>
+                        <option>AI Automation</option>
+                        <option>SaaS Platform</option>
+                        <option>Dashboard</option>
+                        <option>Enterprise Platform</option>
+                        <option>Other</option>
+                    </select>
+
+                    <select id="budget">
+                        <option value="">Estimated Budget</option>
+                        <option>Under $1,000</option>
+                        <option>$1,000 - $5,000</option>
+                        <option>$5,000 - $10,000</option>
+                        <option>$10,000 - $50,000</option>
+                        <option>$50,000+</option>
+                        <option>Not sure yet</option>
+                    </select>
+
+                    <textarea
+                        id="details"
+                        placeholder="Tell me about your project..."
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="btn btn-primary">
+                        Send Project Request
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<a
+    class="whatsapp-float"
+    href="https://wa.me/93789155454?text=Hello%20Shoaib%2C%20I%27m%20interested%20in%20your%20services."
+    target="_blank"
+    aria-label="WhatsApp"
+>
+    💬
+</a>
+
+<footer>
+    <div class="container">
+        <p>
+            © <span id="year"></span> Shoaib | Web & AI Developer. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<script>
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menu = document.getElementById("menu");
+const navLinks = document.getElementById("navLinks");
+
+menu.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("show");
+            }
+        });
+    },
+    {
+        threshold:0.12
+    }
+);
+
+revealElements.forEach(element => {
+    observer.observe(element);
+});
+
+
+/* =========================
+   PROJECT FORM
+   Opens WhatsApp with project
+   details automatically.
+========================= */
+
+const form = document.getElementById("projectForm");
+
+form.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const company = document.getElementById("company").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const projectType = document.getElementById("projectType").value;
+    const budget = document.getElementById("budget").value;
+    const details = document.getElementById("details").value.trim();
+
+    const message =
+`Hello Shoaib,
+
+I would like to discuss a project.
+
+Name: ${name}
+Company: ${company || "Not provided"}
+Email: ${email}
+Project Type: ${projectType}
+Budget: ${budget || "Not provided"}
+
+Project Details:
+${details}
+
+I found your portfolio and would like to discuss the project with you.`;
+
+    const whatsappURL =
+        "https://wa.me/93789155454?text=" +
+        encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+});
+
+
+/* =========================
+   CURRENT YEAR
+========================= */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
