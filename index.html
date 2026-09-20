@@ -2,31 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SHUAIB — Premium Web Design & Shopify</title>
+<title>Shoaib — AI, Web & Automation Studio</title>
 
-<meta name="description"
-content="Premium websites, Shopify stores and conversion-focused digital experiences for ambitious businesses worldwide.">
+<meta name="description" content="Shoaib builds premium websites, AI solutions, automation systems, SaaS products and dashboards for ambitious businesses worldwide.">
 
-<meta name="keywords"
-content="web design, website development, Shopify, Shopify designer, landing page, ecommerce, Dubai web design, UAE web design">
+<meta name="keywords" content="web development, AI automation, SaaS development, Shopify, website design, AI solutions, automation, dashboards, Afghanistan, Dubai, UAE">
 
-<meta name="author" content="SHUAIB">
+<meta name="author" content="Shoaib">
+
+<meta name="theme-color" content="#08090b">
+
+<meta property="og:title" content="Shoaib — AI, Web & Automation Studio">
+<meta property="og:description" content="Premium websites, AI solutions, automation and digital products for ambitious businesses worldwide.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anmt3878-rgb.github.io/Business-Shoaib/">
 
 <style>
 
+/* =========================================================
+   SHOAIB VERSION 3
+   Single-file website
+========================================================= */
+
 :root{
-    --bg:#070809;
-    --bg2:#0d0f12;
-    --card:#111419;
-    --card2:#161a20;
-    --text:#f7f7f4;
-    --muted:#9da3ad;
-    --gold:#d9b46c;
-    --gold2:#f1d79e;
-    --line:rgba(255,255,255,.09);
+    --bg:#060708;
+    --bg2:#0b0d10;
+    --card:#101318;
+    --card2:#14181e;
+
+    --text:#f6f7f8;
+    --muted:#9ca3af;
+
+    --gold:#d8b46a;
+    --gold-light:#f1d89b;
+
     --green:#25D366;
+
+    --border:rgba(255,255,255,.09);
+    --border-hover:rgba(216,180,106,.5);
+
     --max:1180px;
 }
 
@@ -34,14 +51,36 @@ content="web design, website development, Shopify, Shopify designer, landing pag
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
 body{
     background:var(--bg);
     color:var(--text);
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
     line-height:1.6;
+    overflow-x:hidden;
+}
+
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background:
+    radial-gradient(
+        circle at 80% 10%,
+        rgba(216,180,106,.06),
+        transparent 25%
+    );
+    z-index:-1;
 }
 
 a{
@@ -49,26 +88,46 @@ a{
     text-decoration:none;
 }
 
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
 .container{
     width:min(var(--max),92%);
     margin:auto;
 }
 
-/* ================= HEADER ================= */
+section{
+    padding:110px 0;
+}
+
+.dark{
+    background:var(--bg2);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 header{
     position:fixed;
     top:0;
     left:0;
-    width:100%;
+    right:0;
     z-index:1000;
-    background:rgba(7,8,9,.82);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid var(--line);
+
+    background:rgba(6,7,8,.78);
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid var(--border);
 }
 
-nav{
+.nav{
     height:76px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -86,109 +145,153 @@ nav{
 
 .nav-links{
     display:flex;
+    align-items:center;
     gap:27px;
     list-style:none;
 }
 
 .nav-links a{
-    color:#c8ccd2;
-    font-size:14px;
+    color:#b7bdc7;
+    font-size:13px;
     transition:.25s;
 }
 
 .nav-links a:hover{
-    color:var(--gold2);
+    color:var(--gold-light);
 }
 
-.nav-cta{
-    padding:11px 18px;
+.nav-button{
     border:1px solid var(--gold);
-    color:var(--gold2);
+    color:var(--gold-light);
     border-radius:999px;
+    padding:10px 17px;
     font-size:13px;
-    font-weight:bold;
+    font-weight:800;
 }
 
 .menu{
     display:none;
-    font-size:28px;
+    border:0;
+    background:none;
+    color:white;
+    font-size:27px;
     cursor:pointer;
 }
 
-/* ================= HERO ================= */
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero{
     min-height:100vh;
-    padding:145px 0 90px;
+
     display:flex;
     align-items:center;
+
+    padding-top:150px;
+    padding-bottom:100px;
+
     background:
-    radial-gradient(circle at 80% 20%,rgba(217,180,108,.17),transparent 30%),
-    radial-gradient(circle at 10% 70%,rgba(255,255,255,.04),transparent 25%);
+    radial-gradient(
+        circle at 75% 20%,
+        rgba(216,180,106,.13),
+        transparent 28%
+    ),
+    radial-gradient(
+        circle at 5% 80%,
+        rgba(255,255,255,.035),
+        transparent 25%
+    );
 }
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.15fr .85fr;
+    grid-template-columns:1.1fr .9fr;
     gap:70px;
     align-items:center;
 }
 
-.badge{
+.status{
     display:inline-flex;
     align-items:center;
     gap:9px;
-    padding:8px 14px;
-    border:1px solid rgba(217,180,108,.35);
-    background:rgba(217,180,108,.07);
+
+    padding:8px 13px;
+
+    border:1px solid rgba(216,180,106,.3);
+    background:rgba(216,180,106,.06);
+
+    color:var(--gold-light);
+
     border-radius:50px;
-    color:var(--gold2);
-    font-size:12px;
-    font-weight:bold;
+
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.5px;
 }
 
-.badge-dot{
+.status-dot{
     width:7px;
     height:7px;
+
     border-radius:50%;
-    background:#53dc78;
-    box-shadow:0 0 12px #53dc78;
+
+    background:#50db78;
+
+    box-shadow:
+    0 0 12px #50db78;
 }
 
-h1{
-    font-size:clamp(48px,7vw,84px);
+.hero h1{
+    margin:25px 0;
+
+    font-size:
+    clamp(47px,7vw,84px);
+
     line-height:.97;
+
     letter-spacing:-4px;
-    margin:26px 0;
 }
 
 .gold{
     color:var(--gold);
 }
 
-.hero-text{
+.hero-description{
     max-width:650px;
+
     color:var(--muted);
+
     font-size:18px;
 }
 
-.buttons{
+.hero-buttons{
     display:flex;
     flex-wrap:wrap;
-    gap:13px;
-    margin-top:30px;
+    gap:12px;
+
+    margin-top:31px;
 }
 
 .btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    padding:14px 22px;
+
+    padding:14px 21px;
+
     border-radius:10px;
-    font-size:14px;
-    font-weight:800;
-    border:1px solid var(--line);
+
+    border:1px solid var(--border);
+
+    font-size:13px;
+    font-weight:900;
+
     transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
 }
 
 .btn-primary{
@@ -197,457 +300,874 @@ h1{
 }
 
 .btn-primary:hover{
-    background:var(--gold2);
-    transform:translateY(-3px);
+    background:var(--gold-light);
 }
 
 .btn-secondary{
     background:var(--card);
+    color:white;
 }
 
 .btn-secondary:hover{
     border-color:var(--gold);
-    transform:translateY(-3px);
 }
 
-/* ================= HERO VISUAL ================= */
+/* =========================================================
+   HERO VISUAL
+========================================================= */
 
-.visual{
+.dashboard{
     position:relative;
-}
 
-.browser{
-    background:#101216;
-    border:1px solid var(--line);
+    background:
+    linear-gradient(
+        145deg,
+        #181c23,
+        #0b0d10
+    );
+
+    border:1px solid var(--border);
+
     border-radius:24px;
-    overflow:hidden;
-    box-shadow:0 35px 100px rgba(0,0,0,.55);
+
+    padding:22px;
+
+    box-shadow:
+    0 35px 100px rgba(0,0,0,.55);
+
     transform:rotate(1deg);
 }
 
-.browser-top{
-    height:42px;
+.dashboard-top{
     display:flex;
+    justify-content:space-between;
     align-items:center;
-    gap:7px;
-    padding:0 15px;
-    border-bottom:1px solid var(--line);
+
+    padding-bottom:17px;
+
+    border-bottom:1px solid var(--border);
 }
 
-.browser-top i{
-    width:8px;
-    height:8px;
+.dots{
+    display:flex;
+    gap:6px;
+}
+
+.dots span{
+    width:7px;
+    height:7px;
     border-radius:50%;
     background:#555;
 }
 
-.browser-content{
-    min-height:390px;
-    padding:35px;
-    background:
-    radial-gradient(circle at 90% 10%,rgba(217,180,108,.12),transparent 30%),
-    linear-gradient(145deg,#171a20,#0c0e11);
+.dashboard-title{
+    font-size:11px;
+    color:#777;
 }
 
-.browser-label{
-    color:var(--gold2);
+.dashboard-main{
+    padding:25px 4px 5px;
+}
+
+.dashboard-main small{
+    color:var(--gold-light);
+
     font-size:10px;
     letter-spacing:2px;
-    font-weight:bold;
+    font-weight:900;
 }
 
-.browser-content h3{
-    font-size:35px;
-    line-height:1.05;
-    margin:18px 0;
+.dashboard-main h3{
+    margin:12px 0;
+
+    font-size:31px;
+    line-height:1.1;
 }
 
-.fake-line{
-    height:8px;
-    width:80%;
-    background:#292e36;
-    border-radius:20px;
-    margin:9px 0;
+.dashboard-main p{
+    color:#8f96a0;
+    font-size:12px;
 }
 
-.fake-line.short{
-    width:50%;
-}
-
-.fake-cards{
+.stats{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-    margin-top:30px;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+
+    margin-top:25px;
 }
 
-.fake-card{
-    height:90px;
+.stat{
+    padding:16px;
+
+    border:1px solid var(--border);
     border-radius:12px;
-    border:1px solid var(--line);
-    background:#12151a;
+
+    background:#101319;
 }
 
-/* ================= TRUST BAR ================= */
+.stat strong{
+    display:block;
+
+    color:var(--gold);
+
+    font-size:21px;
+}
+
+.stat span{
+    color:#747b85;
+
+    font-size:9px;
+}
+
+.chart{
+    height:100px;
+
+    margin-top:13px;
+
+    border-radius:13px;
+
+    border:1px solid var(--border);
+
+    background:
+    linear-gradient(
+        160deg,
+        rgba(216,180,106,.13),
+        transparent 60%
+    );
+
+    position:relative;
+    overflow:hidden;
+}
+
+.chart:after{
+    content:"";
+
+    position:absolute;
+
+    width:130%;
+    height:2px;
+
+    background:var(--gold);
+
+    left:-10%;
+    bottom:27px;
+
+    transform:rotate(-9deg);
+
+    box-shadow:
+    50px -20px 0 var(--gold),
+    100px -9px 0 var(--gold);
+}
+
+/* =========================================================
+   TRUST STRIP
+========================================================= */
 
 .trust{
-    padding:22px 0;
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
+    padding:21px 0;
+
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+
+    color:#767d88;
+
     text-align:center;
-    color:#858b95;
-    font-size:11px;
+
+    font-size:10px;
+
     letter-spacing:2px;
     text-transform:uppercase;
 }
 
-/* ================= GENERAL ================= */
-
-section{
-    padding:105px 0;
-}
-
-.dark{
-    background:var(--bg2);
-}
+/* =========================================================
+   SECTION HEAD
+========================================================= */
 
 .section-head{
-    max-width:720px;
-    margin-bottom:50px;
+    max-width:750px;
+
+    margin-bottom:52px;
 }
 
 .kicker{
     color:var(--gold);
-    font-size:11px;
+
+    font-size:10px;
+
     font-weight:900;
+
     letter-spacing:2px;
+
     text-transform:uppercase;
 }
 
 .section-head h2{
-    font-size:clamp(36px,5vw,58px);
-    line-height:1.04;
-    letter-spacing:-2px;
     margin:12px 0;
+
+    font-size:
+    clamp(37px,5vw,58px);
+
+    line-height:1.04;
+
+    letter-spacing:-2.5px;
 }
 
 .section-head p{
     color:var(--muted);
 }
 
-/* ================= SERVICES ================= */
+/* =========================================================
+   SERVICES
+========================================================= */
 
-.cards{
+.services{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+    repeat(3,1fr);
+
     gap:17px;
 }
 
-.card{
+.service{
+    padding:29px;
+
     background:var(--card);
-    border:1px solid var(--line);
+
+    border:1px solid var(--border);
+
     border-radius:18px;
-    padding:30px;
+
     transition:.3s;
 }
 
-.card:hover{
+.service:hover{
     transform:translateY(-7px);
-    border-color:rgba(217,180,108,.5);
+
+    border-color:var(--border-hover);
 }
 
-.icon{
-    color:var(--gold2);
-    font-size:24px;
-    margin-bottom:20px;
+.service-icon{
+    width:46px;
+    height:46px;
+
+    display:grid;
+    place-items:center;
+
+    margin-bottom:21px;
+
+    border-radius:13px;
+
+    background:rgba(216,180,106,.08);
+
+    color:var(--gold-light);
+
+    font-size:21px;
 }
 
-.card h3{
-    font-size:20px;
-    margin-bottom:10px;
+.service h3{
+    margin-bottom:9px;
+
+    font-size:19px;
 }
 
-.card p{
+.service p{
     color:var(--muted);
+
+    font-size:13px;
+}
+
+/* =========================================================
+   FEATURE
+========================================================= */
+
+.feature{
+    display:grid;
+
+    grid-template-columns:
+    .9fr 1.1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.feature-box{
+    padding:35px;
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    background:
+    radial-gradient(
+        circle at 80% 20%,
+        rgba(216,180,106,.1),
+        transparent 30%
+    ),
+    var(--card);
+}
+
+.feature-label{
+    color:var(--gold);
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:2px;
+}
+
+.feature-box h3{
+    margin:17px 0;
+
+    font-size:35px;
+    line-height:1.1;
+}
+
+.feature-box p{
+    color:var(--muted);
+
     font-size:14px;
 }
 
-/* ================= PORTFOLIO ================= */
+.check-list{
+    list-style:none;
 
-.portfolio{
+    margin-top:25px;
+}
+
+.check-list li{
+    margin:12px 0;
+
+    color:#c5c9cf;
+
+    font-size:13px;
+}
+
+.check-list li:before{
+    content:"✓";
+
+    color:var(--gold);
+
+    font-weight:900;
+
+    margin-right:10px;
+}
+
+/* =========================================================
+   WORK
+========================================================= */
+
+.work-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+    1fr 1fr;
+
     gap:18px;
 }
 
-.project{
-    min-height:340px;
-    border:1px solid var(--line);
-    border-radius:20px;
-    padding:30px;
+.work-card{
+    min-height:350px;
+
+    position:relative;
+
     display:flex;
     align-items:flex-end;
-    position:relative;
+
     overflow:hidden;
-    background:linear-gradient(135deg,#272c34,#101216);
+
+    padding:29px;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #262c35,
+        #0c0e11
+    );
 }
 
-.project:nth-child(2){
-    background:linear-gradient(135deg,#3d301e,#101216);
+.work-card:nth-child(2){
+    background:
+    linear-gradient(
+        135deg,
+        #3d321f,
+        #0c0e11
+    );
 }
 
-.project:nth-child(3){
-    background:linear-gradient(135deg,#1c303d,#101216);
+.work-card:nth-child(3){
+    background:
+    linear-gradient(
+        135deg,
+        #19323d,
+        #0c0e11
+    );
 }
 
-.project:nth-child(4){
-    background:linear-gradient(135deg,#30233e,#101216);
+.work-card:nth-child(4){
+    background:
+    linear-gradient(
+        135deg,
+        #32213c,
+        #0c0e11
+    );
 }
 
-.project:before{
+.work-card:before{
     content:"";
+
     position:absolute;
-    width:230px;
-    height:230px;
-    right:-80px;
-    top:-80px;
+
+    width:280px;
+    height:280px;
+
+    right:-100px;
+    top:-100px;
+
     border-radius:50%;
-    background:rgba(255,255,255,.05);
+
+    background:
+    rgba(255,255,255,.045);
 }
 
-.project-content{
+.work-card:after{
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+    height:100px;
+
+    right:45px;
+    top:55px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:12px;
+
+    transform:rotate(-8deg);
+}
+
+.work-content{
     position:relative;
     z-index:2;
 }
 
-.project-content small{
-    color:var(--gold2);
-    font-size:11px;
+.work-content small{
+    color:var(--gold-light);
+
+    font-size:10px;
+
     letter-spacing:1.5px;
+
     text-transform:uppercase;
 }
 
-.project-content h3{
-    font-size:28px;
+.work-content h3{
     margin:6px 0;
+
+    font-size:27px;
 }
 
-.project-content p{
-    color:#b4bac3;
-    font-size:13px;
+.work-content p{
+    max-width:430px;
+
+    color:#aab0b9;
+
+    font-size:12px;
 }
 
-/* ================= RESULTS ================= */
-
-.results{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:17px;
-}
-
-.result{
-    padding:30px;
-    border:1px solid var(--line);
-    background:var(--card);
-    border-radius:18px;
-}
-
-.result strong{
-    display:block;
-    color:var(--gold);
-    font-size:34px;
-    margin-bottom:5px;
-}
-
-.result span{
-    color:#aaa;
-    font-size:13px;
-}
-
-/* ================= PROCESS ================= */
+/* =========================================================
+   PROCESS
+========================================================= */
 
 .process{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+    repeat(4,1fr);
+
     gap:16px;
 }
 
-.step{
-    padding:24px;
-    border-top:1px solid var(--line);
+.process-card{
+    padding:25px;
+
+    border-top:1px solid var(--border);
 }
 
-.step-number{
+.process-number{
     color:var(--gold);
-    font-size:12px;
+
+    font-size:11px;
+
     font-weight:900;
+
+    letter-spacing:1px;
 }
 
-.step h3{
+.process-card h3{
     margin:17px 0 8px;
 }
 
-.step p{
+.process-card p{
     color:var(--muted);
+
     font-size:13px;
 }
 
-/* ================= PRICING ================= */
+/* =========================================================
+   PRICING
+========================================================= */
 
 .pricing{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+    repeat(3,1fr);
+
     gap:17px;
 }
 
 .price-card{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:20px;
     padding:31px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
 }
 
 .price-card.featured{
     border-color:var(--gold);
-    box-shadow:0 25px 80px rgba(217,180,108,.08);
+
+    box-shadow:
+    0 30px 80px rgba(216,180,106,.07);
 }
 
 .price-label{
-    color:var(--gold2);
-    font-size:11px;
-    font-weight:900;
-    text-transform:uppercase;
+    color:var(--gold-light);
+
+    font-size:10px;
+
     letter-spacing:1.5px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
 }
 
 .price{
+    margin:10px 0;
+
     font-size:43px;
+
     font-weight:900;
-    margin:12px 0;
 }
 
 .price small{
-    font-size:12px;
-    color:#777;
+    color:#70757e;
+
+    font-size:11px;
+
     font-weight:normal;
 }
 
 .price-description{
     color:var(--muted);
+
     font-size:13px;
 }
 
 .features{
     list-style:none;
+
     margin:24px 0;
 }
 
 .features li{
-    color:#c5c8ce;
-    font-size:13px;
     margin:11px 0;
+
+    color:#c3c7cd;
+
+    font-size:13px;
 }
 
 .features li:before{
     content:"✓";
+
     color:var(--gold);
-    font-weight:bold;
+
+    font-weight:900;
+
     margin-right:9px;
 }
 
-/* ================= FAQ ================= */
+/* =========================================================
+   LEAD FORM
+========================================================= */
+
+.contact-grid{
+    display:grid;
+
+    grid-template-columns:
+    .8fr 1.2fr;
+
+    gap:60px;
+
+    align-items:start;
+}
+
+.contact-copy h2{
+    margin:12px 0 17px;
+
+    font-size:
+    clamp(38px,5vw,58px);
+
+    line-height:1.03;
+
+    letter-spacing:-2px;
+}
+
+.contact-copy p{
+    color:var(--muted);
+}
+
+.contact-info{
+    margin-top:27px;
+}
+
+.contact-info div{
+    margin:13px 0;
+
+    color:#b6bbc4;
+
+    font-size:13px;
+}
+
+.form{
+    padding:30px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+}
+
+.form-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:14px;
+}
+
+.field{
+    margin-bottom:14px;
+}
+
+.field.full{
+    grid-column:1/-1;
+}
+
+.field label{
+    display:block;
+
+    margin-bottom:7px;
+
+    color:#aab0b9;
+
+    font-size:11px;
+
+    font-weight:800;
+}
+
+.field input,
+.field select,
+.field textarea{
+    width:100%;
+
+    border:1px solid var(--border);
+
+    outline:none;
+
+    background:#0b0e12;
+
+    color:white;
+
+    border-radius:10px;
+
+    padding:13px 14px;
+
+    font-size:13px;
+
+    transition:.2s;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+    border-color:var(--gold);
+}
+
+.field textarea{
+    min-height:120px;
+
+    resize:vertical;
+}
+
+.form button{
+    width:100%;
+
+    border:0;
+
+    cursor:pointer;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
 
 .faq{
     max-width:850px;
 }
 
 details{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:13px;
-    padding:19px 20px;
     margin-bottom:10px;
+
+    padding:18px 20px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:13px;
 }
 
 summary{
     cursor:pointer;
-    font-weight:bold;
+
+    font-weight:800;
+
+    font-size:14px;
 }
 
 details p{
-    color:var(--muted);
-    font-size:13px;
     margin-top:12px;
+
+    color:var(--muted);
+
+    font-size:13px;
 }
 
-/* ================= CTA ================= */
+/* =========================================================
+   CTA
+========================================================= */
 
-.cta{
-    padding:125px 0;
+.final-cta{
+    padding:130px 0;
+
     text-align:center;
+
     background:
-    radial-gradient(circle at 50% 0,rgba(217,180,108,.18),transparent 34%),
+    radial-gradient(
+        circle at 50% 0,
+        rgba(216,180,106,.16),
+        transparent 35%
+    ),
     var(--bg2);
 }
 
-.cta h2{
-    font-size:clamp(43px,6vw,72px);
+.final-cta h2{
+    margin:13px 0 20px;
+
+    font-size:
+    clamp(43px,6vw,73px);
+
     line-height:1;
+
     letter-spacing:-3px;
-    margin:14px 0 20px;
 }
 
-.cta p{
+.final-cta p{
     max-width:650px;
+
     margin:auto;
+
     color:var(--muted);
 }
 
-.cta .buttons{
-    justify-content:center;
-}
-
-.contact-details{
+.final-buttons{
     display:flex;
+
     justify-content:center;
+
     flex-wrap:wrap;
-    gap:22px;
-    margin-top:25px;
-    color:#a7abb3;
-    font-size:13px;
+
+    gap:12px;
+
+    margin-top:30px;
 }
 
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
-    border-top:1px solid var(--line);
     padding:28px 0;
-    color:#777;
-    font-size:12px;
+
+    border-top:1px solid var(--border);
+
+    color:#6f757e;
+
+    font-size:11px;
 }
 
-.footer-flex{
+.footer{
     display:flex;
+
     justify-content:space-between;
+
     gap:20px;
 }
 
-/* ================= WHATSAPP ================= */
+/* =========================================================
+   WHATSAPP
+========================================================= */
 
 .whatsapp{
     position:fixed;
+
     right:20px;
     bottom:20px;
+
     width:59px;
     height:59px;
-    border-radius:50%;
-    background:var(--green);
-    color:white;
+
     display:grid;
     place-items:center;
-    font-size:25px;
+
     z-index:999;
-    box-shadow:0 10px 35px rgba(37,211,102,.3);
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    color:white;
+
+    font-size:24px;
+
+    box-shadow:
+    0 10px 35px rgba(37,211,102,.3);
+
     transition:.25s;
 }
 
@@ -655,12 +1175,14 @@ footer{
     transform:scale(1.08);
 }
 
-/* ================= MOBILE ================= */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-@media(max-width:850px){
+@media(max-width:900px){
 
     .nav-links,
-    .nav-cta{
+    .nav-button{
         display:none;
     }
 
@@ -669,28 +1191,33 @@ footer{
     }
 
     .nav-links.open{
-        display:flex;
         position:absolute;
-        left:0;
-        top:76px;
-        width:100%;
-        padding:24px;
-        background:#08090b;
+
+        display:flex;
+
         flex-direction:column;
-        border-bottom:1px solid var(--line);
+
+        align-items:flex-start;
+
+        left:0;
+        right:0;
+        top:76px;
+
+        padding:25px;
+
+        background:#07090b;
+
+        border-bottom:1px solid var(--border);
     }
 
-    .hero-grid{
+    .hero-grid,
+    .feature,
+    .contact-grid{
         grid-template-columns:1fr;
     }
 
-    .cards,
-    .pricing,
-    .results{
-        grid-template-columns:1fr;
-    }
-
-    .portfolio{
+    .services,
+    .pricing{
         grid-template-columns:1fr;
     }
 
@@ -698,75 +1225,147 @@ footer{
         grid-template-columns:1fr 1fr;
     }
 
+    .dashboard{
+        transform:none;
+    }
 }
 
-@media(max-width:520px){
+@media(max-width:600px){
 
     section{
-        padding:78px 0;
+        padding:80px 0;
     }
 
-    h1{
-        letter-spacing:-2px;
+    .hero{
+        padding-top:125px;
     }
 
-    .browser{
-        transform:none;
+    .hero h1{
+        letter-spacing:-2.5px;
+    }
+
+    .work-grid{
+        grid-template-columns:1fr;
     }
 
     .process{
         grid-template-columns:1fr;
     }
 
-    .footer-flex{
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+
+    .footer{
         flex-direction:column;
+
         text-align:center;
     }
 
-    .browser-content{
-        min-height:310px;
+    .dashboard{
+        padding:17px;
+    }
+
+    .dashboard-main h3{
+        font-size:27px;
+    }
+
+    .feature-box{
         padding:25px;
     }
 
 }
 
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.hero-content{
+    animation:fadeUp .7s ease both;
+}
+
 </style>
 </head>
 
+
 <body>
 
-<!-- ================= HEADER ================= -->
+
+<!-- ======================================================
+HEADER
+====================================================== -->
 
 <header>
 
 <div class="container">
 
-<nav>
+<nav class="nav">
 
 <a href="#home" class="logo">
-SHUAIB<span>.</span>
+SHOAIB<span>.</span>
 </a>
 
 <ul class="nav-links" id="navLinks">
 
-<li><a href="#services">Services</a></li>
-<li><a href="#work">Work</a></li>
-<li><a href="#process">Process</a></li>
-<li><a href="#pricing">Pricing</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#contact">Contact</a></li>
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#solutions">Solutions</a>
+</li>
+
+<li>
+<a href="#work">Work</a>
+</li>
+
+<li>
+<a href="#process">Process</a>
+</li>
+
+<li>
+<a href="#pricing">Pricing</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
 
 </ul>
 
 <a
-class="nav-cta"
+class="nav-button"
 target="_blank"
-href="https://wa.me/93789155454?text=Hello%20Shuaib%2C%20I%27d%20like%20to%20discuss%20a%20website%20project."
+href="https://wa.me/93789155454?text=Hello%20Shoaib%2C%20I%27d%20like%20to%20discuss%20a%20project."
 >
 Start a Project
 </a>
 
-<div class="menu" onclick="toggleMenu()">☰</div>
+<button
+class="menu"
+onclick="toggleMenu()"
+aria-label="Open menu"
+>
+☰
+</button>
 
 </nav>
 
@@ -775,7 +1374,9 @@ Start a Project
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- ======================================================
+HERO
+====================================================== -->
 
 <section class="hero" id="home">
 
@@ -783,47 +1384,54 @@ Start a Project
 
 <div class="hero-grid">
 
-<div>
 
-<div class="badge">
+<div class="hero-content">
 
-<span class="badge-dot"></span>
+<div class="status">
 
-Available for selected international projects
+<span class="status-dot"></span>
+
+Available for international projects
 
 </div>
 
+
 <h1>
 
-Your website should look as valuable as your
+Build a digital presence that feels
 
-<span class="gold">business.</span>
+<span class="gold">
+expensive.
+</span>
 
 </h1>
 
-<p class="hero-text">
 
-I create premium websites and Shopify experiences
-for ambitious businesses that want stronger credibility,
-clearer messaging and more enquiries.
+<p class="hero-description">
+
+I build premium websites, AI solutions,
+automation systems, SaaS products and
+digital experiences for ambitious businesses
+worldwide.
 
 </p>
 
-<div class="buttons">
+
+<div class="hero-buttons">
 
 <a
 class="btn btn-primary"
 target="_blank"
-href="https://wa.me/93789155454?text=Hello%20Shuaib%2C%20I%27d%20like%20to%20request%20a%20website%20quote."
+href="https://wa.me/93789155454?text=Hello%20Shoaib%2C%20I%27d%20like%20to%20request%20a%20project%20quote."
 >
-Get a Project Quote →
+Request a Quote →
 </a>
 
 <a
 class="btn btn-secondary"
 href="#work"
 >
-View Selected Work
+Explore Work
 </a>
 
 </div>
@@ -831,45 +1439,65 @@ View Selected Work
 </div>
 
 
-<!-- HERO MOCKUP -->
+<!-- HERO DASHBOARD -->
 
-<div class="visual">
+<div class="dashboard">
 
-<div class="browser">
+<div class="dashboard-top">
 
-<div class="browser-top">
+<div class="dots">
 
-<i></i>
-<i></i>
-<i></i>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<div class="dashboard-title">
+DIGITAL SYSTEM
+</div>
 
 </div>
 
-<div class="browser-content">
 
-<div class="browser-label">
+<div class="dashboard-main">
 
-PREMIUM DIGITAL EXPERIENCE
-
-</div>
+<small>
+BUSINESS PERFORMANCE
+</small>
 
 <h3>
-
-Build trust before the first conversation.
-
+One system.
+<br>
+Multiple opportunities.
 </h3>
 
-<div class="fake-line"></div>
-<div class="fake-line short"></div>
+<p>
+Web • AI • Automation • SaaS
+</p>
 
-<div class="fake-cards">
 
-<div class="fake-card"></div>
-<div class="fake-card"></div>
+<div class="stats">
 
+<div class="stat">
+<strong>24/7</strong>
+<span>Digital presence</span>
+</div>
+
+<div class="stat">
+<strong>AI</strong>
+<span>Smart systems</span>
+</div>
+
+<div class="stat">
+<strong>∞</strong>
+<span>Scalable</span>
 </div>
 
 </div>
+
+
+<div class="chart"></div>
 
 </div>
 
@@ -882,135 +1510,154 @@ Build trust before the first conversation.
 </section>
 
 
-<!-- TRUST -->
+<!-- ======================================================
+TRUST
+====================================================== -->
 
 <div class="trust">
 
-Web Design • Shopify • Ecommerce • Landing Pages • Redesign • Conversion
+WEB DEVELOPMENT • AI • AUTOMATION • SAAS • SHOPIFY • DASHBOARDS • DIGITAL PRODUCTS
 
 </div>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- ======================================================
+SERVICES
+====================================================== -->
 
-<section id="services" class="dark">
+<section id="services">
 
 <div class="container">
 
 <div class="section-head">
 
 <div class="kicker">
-Services
+What I Build
 </div>
 
 <h2>
-Everything needed for a stronger digital presence.
+Digital products designed around your business.
 </h2>
 
 <p>
-A focused combination of strategy, design and development
-to help your business communicate clearly online.
+From a high-end website to a complete AI-powered
+workflow, the goal is to create something useful,
+credible and easy for your customers to understand.
 </p>
 
 </div>
 
 
-<div class="cards">
+<div class="services">
 
-<div class="card">
 
-<div class="icon">◈</div>
+<div class="service">
+
+<div class="service-icon">
+⌘
+</div>
 
 <h3>
 Premium Websites
 </h3>
 
 <p>
-Modern websites designed to make your company
-look professional, trustworthy and established.
+Modern, responsive websites that communicate
+your value clearly and create a stronger first impression.
 </p>
 
 </div>
 
 
-<div class="card">
+<div class="service">
 
-<div class="icon">◆</div>
+<div class="service-icon">
+◆
+</div>
 
 <h3>
-Shopify Stores
+AI Solutions
 </h3>
 
 <p>
-Clean ecommerce experiences with better product
-presentation, navigation and customer journeys.
+AI-powered experiences, assistants and workflows
+that can help businesses reduce repetitive work.
 </p>
 
 </div>
 
 
-<div class="card">
+<div class="service">
 
-<div class="icon">↗</div>
+<div class="service-icon">
+↗
+</div>
 
 <h3>
-Landing Pages
+Automation
 </h3>
 
 <p>
-Focused pages for products, services and advertising
-campaigns with one clear customer action.
+Connect repetitive business tasks into practical
+automated workflows.
 </p>
 
 </div>
 
 
-<div class="card">
+<div class="service">
 
-<div class="icon">⚡</div>
+<div class="service-icon">
+▣
+</div>
 
 <h3>
-Website Redesign
+SaaS Products
 </h3>
 
 <p>
-Turn an outdated website into a modern,
-responsive and more credible experience.
+Turn a software idea into a structured MVP
+with a clear product experience.
 </p>
 
 </div>
 
 
-<div class="card">
+<div class="service">
 
-<div class="icon">⌕</div>
+<div class="service-icon">
+▤
+</div>
 
 <h3>
-SEO Foundation
+Dashboards
 </h3>
 
 <p>
-Clean structure, metadata and page foundations
-that help search engines understand your website.
+Clean admin panels and business dashboards
+for managing information efficiently.
 </p>
 
 </div>
 
 
-<div class="card">
+<div class="service">
 
-<div class="icon">◎</div>
+<div class="service-icon">
+◇
+</div>
 
 <h3>
-Conversion Setup
+Shopify & Ecommerce
 </h3>
 
 <p>
-Clear calls-to-action and enquiry paths designed
-to make it easier for visitors to contact you.
+Professional ecommerce experiences with better
+product presentation and customer journeys.
 </p>
 
 </div>
+
 
 </div>
 
@@ -1019,7 +1666,92 @@ to make it easier for visitors to contact you.
 </section>
 
 
-<!-- ================= WORK ================= -->
+<!-- ======================================================
+AI SOLUTIONS
+====================================================== -->
+
+<section class="dark" id="solutions">
+
+<div class="container">
+
+<div class="feature">
+
+
+<div class="feature-box">
+
+<div class="feature-label">
+AI + AUTOMATION
+</div>
+
+<h3>
+Turn repetitive work into a system.
+</h3>
+
+<p>
+A modern business can connect forms, websites,
+customer enquiries, AI tools and internal workflows
+into one practical digital system.
+</p>
+
+<ul class="check-list">
+
+<li>Lead collection</li>
+<li>AI customer assistance</li>
+<li>Automated notifications</li>
+<li>Data organization</li>
+<li>Business dashboards</li>
+<li>Custom workflow design</li>
+
+</ul>
+
+</div>
+
+
+<div class="section-head">
+
+<div class="kicker">
+For Growing Businesses
+</div>
+
+<h2>
+Your website can be more than a brochure.
+</h2>
+
+<p>
+It can become the first step in your sales,
+support or operational workflow.
+
+Instead of sending every visitor to a dead end,
+we design clear paths toward an enquiry,
+purchase or useful action.
+</p>
+
+
+<div class="hero-buttons">
+
+<a
+class="btn btn-primary"
+target="_blank"
+href="https://wa.me/93789155454?text=Hello%20Shoaib%2C%20I%27m%20interested%20in%20an%20AI%20or%20automation%20project."
+>
+Discuss an AI Project
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+WORK
+====================================================== -->
 
 <section id="work">
 
@@ -1032,34 +1764,35 @@ Selected Concepts
 </div>
 
 <h2>
-Design that communicates value in seconds.
+Ideas designed to show what is possible.
 </h2>
 
 <p>
-These concept projects can be replaced with real client
-projects as your portfolio grows.
+The examples below are concept projects.
+They are not presented as completed client projects.
 </p>
 
 </div>
 
 
-<div class="portfolio">
+<div class="work-grid">
 
 
-<div class="project">
+<div class="work-card">
 
-<div class="project-content">
+<div class="work-content">
 
 <small>
-Luxury Business
+AI PLATFORM — CONCEPT
 </small>
 
 <h3>
-Executive Brand
+Enterprise AI
 </h3>
 
 <p>
-Premium corporate website concept for a high-value service business.
+A concept for an AI-powered business platform
+with dashboards and automated workflows.
 </p>
 
 </div>
@@ -1067,20 +1800,21 @@ Premium corporate website concept for a high-value service business.
 </div>
 
 
-<div class="project">
+<div class="work-card">
 
-<div class="project-content">
+<div class="work-content">
 
 <small>
-Ecommerce
+BUSINESS SYSTEM — CONCEPT
 </small>
 
 <h3>
-Luxury Fashion
+Smart Automation
 </h3>
 
 <p>
-Editorial-inspired storefront focused on products and trust.
+A concept showing how repetitive business processes
+could be connected into one workflow.
 </p>
 
 </div>
@@ -1088,20 +1822,21 @@ Editorial-inspired storefront focused on products and trust.
 </div>
 
 
-<div class="project">
+<div class="work-card">
 
-<div class="project-content">
+<div class="work-content">
 
 <small>
-Hospitality
+CYBERSECURITY — CONCEPT
 </small>
 
 <h3>
-Modern Restaurant
+Security Dashboard
 </h3>
 
 <p>
-Conversion-focused experience for bookings and enquiries.
+A professional dashboard concept for monitoring
+digital security information.
 </p>
 
 </div>
@@ -1109,25 +1844,27 @@ Conversion-focused experience for bookings and enquiries.
 </div>
 
 
-<div class="project">
+<div class="work-card">
 
-<div class="project-content">
+<div class="work-content">
 
 <small>
-Professional Services
+INSURANCE TECH — CONCEPT
 </small>
 
 <h3>
-Global Consultancy
+Insurance AI
 </h3>
 
 <p>
-Clear positioning and lead-generation structure for an international firm.
+A concept for simplifying insurance workflows
+with a modern digital experience.
 </p>
 
 </div>
 
 </div>
+
 
 </div>
 
@@ -1136,74 +1873,11 @@ Clear positioning and lead-generation structure for an international firm.
 </section>
 
 
-<!-- ================= RESULTS ================= -->
+<!-- ======================================================
+PROCESS
+====================================================== -->
 
-<section class="dark">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="kicker">
-What the website is built to improve
-</div>
-
-<h2>
-The goal is not just a beautiful website.
-</h2>
-
-<p>
-The website should make it easier for the right visitor
-to understand your business and take the next step.
-</p>
-
-</div>
-
-
-<div class="results">
-
-<div class="result">
-
-<strong>01</strong>
-
-<span>
-Clearer positioning
-</span>
-
-</div>
-
-
-<div class="result">
-
-<strong>02</strong>
-
-<span>
-Stronger first impression
-</span>
-
-</div>
-
-
-<div class="result">
-
-<strong>03</strong>
-
-<span>
-Simpler enquiry journey
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= PROCESS ================= -->
-
-<section id="process">
+<section class="dark" id="process">
 
 <div class="container">
 
@@ -1214,8 +1888,13 @@ Process
 </div>
 
 <h2>
-From idea to launch without the confusion.
+Simple process. Clear communication.
 </h2>
+
+<p>
+The project starts with understanding what you need
+and ends with a working digital product.
+</p>
 
 </div>
 
@@ -1223,9 +1902,9 @@ From idea to launch without the confusion.
 <div class="process">
 
 
-<div class="step">
+<div class="process-card">
 
-<div class="step-number">
+<div class="process-number">
 01 — DISCOVER
 </div>
 
@@ -1234,34 +1913,34 @@ Understand
 </h3>
 
 <p>
-We discuss your business, audience, offer,
-goals and requirements.
+We discuss your business, audience, goals,
+features and project requirements.
 </p>
 
 </div>
 
 
-<div class="step">
+<div class="process-card">
 
-<div class="step-number">
-02 — DESIGN
+<div class="process-number">
+02 — PLAN
 </div>
 
 <h3>
-Shape
+Structure
 </h3>
 
 <p>
-We create the visual direction, structure
-and customer journey.
+We organize the pages, features and customer
+journey before development.
 </p>
 
 </div>
 
 
-<div class="step">
+<div class="process-card">
 
-<div class="step-number">
+<div class="process-number">
 03 — BUILD
 </div>
 
@@ -1270,26 +1949,26 @@ Develop
 </h3>
 
 <p>
-The approved experience becomes a responsive
-working website.
+The approved structure becomes a responsive,
+functional digital experience.
 </p>
 
 </div>
 
 
-<div class="step">
+<div class="process-card">
 
-<div class="step-number">
+<div class="process-number">
 04 — LAUNCH
 </div>
 
 <h3>
-Improve
+Deliver
 </h3>
 
 <p>
-Final checks, publishing and practical
-optimization before launch.
+Final testing, publishing and practical launch
+support complete the project.
 </p>
 
 </div>
@@ -1302,9 +1981,11 @@ optimization before launch.
 </section>
 
 
-<!-- ================= PRICING ================= -->
+<!-- ======================================================
+PRICING
+====================================================== -->
 
-<section id="pricing" class="dark">
+<section id="pricing">
 
 <div class="container">
 
@@ -1315,12 +1996,12 @@ Starting Investment
 </div>
 
 <h2>
-Choose a direction. Then we tailor the scope.
+Choose the level that matches your project.
 </h2>
 
 <p>
-These are starting prices. Final pricing depends on
-pages, features, integrations and project requirements.
+Prices are starting points. Final pricing depends
+on the exact scope, features, integrations and timeline.
 </p>
 
 </div>
@@ -1334,23 +2015,23 @@ pages, features, integrations and project requirements.
 <div class="price-card">
 
 <div class="price-label">
-Starter
+Launch
 </div>
 
 <div class="price">
-$1,000
-<small>starting</small>
+$1,000+
 </div>
 
 <p class="price-description">
-For businesses that need a focused professional presence.
+For a professional business website.
 </p>
 
 <ul class="features">
 
 <li>Responsive website</li>
-<li>Core pages</li>
-<li>WhatsApp / contact CTA</li>
+<li>Core business pages</li>
+<li>Modern custom design</li>
+<li>WhatsApp integration</li>
 <li>Basic SEO setup</li>
 <li>Launch support</li>
 
@@ -1359,9 +2040,9 @@ For businesses that need a focused professional presence.
 <a
 class="btn btn-secondary"
 target="_blank"
-href="https://wa.me/93789155454?text=Hello%20Shuaib%2C%20I%27m%20interested%20in%20the%20Starter%20package."
+href="https://wa.me/93789155454?text=Hello%20Shoaib%2C%20I%27m%20interested%20in%20the%20Launch%20website%20package."
 >
-Discuss Starter
+Discuss Project
 </a>
 
 </div>
@@ -1372,16 +2053,15 @@ Discuss Starter
 <div class="price-card featured">
 
 <div class="price-label">
-Business
+Growth
 </div>
 
 <div class="price">
-$2,500
-<small>starting</small>
+$2,500+
 </div>
 
 <p class="price-description">
-For businesses that need a stronger digital presence.
+For businesses that want a stronger digital system.
 </p>
 
 <ul class="features">
@@ -1389,8 +2069,9 @@ For businesses that need a stronger digital presence.
 <li>Premium custom design</li>
 <li>Multiple pages</li>
 <li>Lead-generation structure</li>
-<li>Mobile optimization</li>
+<li>Advanced responsive design</li>
 <li>SEO foundation</li>
+<li>Automation-ready structure</li>
 <li>Launch support</li>
 
 </ul>
@@ -1398,7 +2079,7 @@ For businesses that need a stronger digital presence.
 <a
 class="btn btn-primary"
 target="_blank"
-href="https://wa.me/93789155454?text=Hello%20Shuaib%2C%20I%27m%20interested%20in%20the%20Business%20package."
+href="https://wa.me/93789155454?text=Hello%20Shoaib%2C%20I%27m%20interested%20in%20the%20Growth%20package."
 >
 Start a Project
 </a>
@@ -1411,35 +2092,35 @@ Start a Project
 <div class="price-card">
 
 <div class="price-label">
-Premium
+Custom
 </div>
 
 <div class="price">
 $5,000+
-<small>starting</small>
 </div>
 
 <p class="price-description">
-For larger brands, ecommerce and custom digital builds.
+For AI, SaaS, ecommerce and custom systems.
 </p>
 
 <ul class="features">
 
-<li>Advanced custom experience</li>
+<li>Custom product experience</li>
+<li>AI / automation options</li>
+<li>SaaS / dashboard development</li>
 <li>Shopify / ecommerce</li>
 <li>Custom integrations</li>
-<li>Conversion optimization</li>
-<li>Priority communication</li>
-<li>Launch support</li>
+<li>Advanced workflows</li>
+<li>Priority project communication</li>
 
 </ul>
 
 <a
 class="btn btn-secondary"
 target="_blank"
-href="https://wa.me/93789155454?text=Hello%20Shuaib%2C%20I%27m%20interested%20in%20a%20Premium%20project."
+href="https://wa.me/93789155454?text=Hello%20Shoaib%2C%20I%27m%20interested%20in%20a%20custom%20$5%2C000%2B%20project."
 >
-Discuss Premium
+Discuss Custom Project
 </a>
 
 </div>
@@ -1452,7 +2133,247 @@ Discuss Premium
 </section>
 
 
-<!-- ================= FAQ ================= -->
+<!-- ======================================================
+CONTACT / PROJECT FORM
+====================================================== -->
+
+<section class="dark" id="contact">
+
+<div class="container">
+
+<div class="contact-grid">
+
+
+<div class="contact-copy">
+
+<div class="kicker">
+Project Request
+</div>
+
+<h2>
+Have an idea?
+Let's turn it into something real.
+</h2>
+
+<p>
+Fill in the form. When you submit it,
+WhatsApp will open with your project details
+already prepared.
+</p>
+
+
+<div class="contact-info">
+
+<div>
+📱 +93 789 155 454
+</div>
+
+<div>
+✉️ janm62274@gmail.com
+</div>
+
+<div>
+🌍 International projects welcome
+</div>
+
+</div>
+
+</div>
+
+
+<form
+class="form"
+id="projectForm"
+onsubmit="sendProject(event)"
+>
+
+
+<div class="form-grid">
+
+
+<div class="field">
+
+<label>
+YOUR NAME
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Your name"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+BUSINESS
+</label>
+
+<input
+type="text"
+id="business"
+placeholder="Company / Business"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+EMAIL
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="you@example.com"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+WEBSITE
+</label>
+
+<input
+type="url"
+id="website"
+placeholder="https://example.com"
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+SERVICE
+</label>
+
+<select id="service" required>
+
+<option value="">
+Select a service
+</option>
+
+<option>
+Website Development
+</option>
+
+<option>
+AI Solution
+</option>
+
+<option>
+Automation
+</option>
+
+<option>
+SaaS Product
+</option>
+
+<option>
+Dashboard
+</option>
+
+<option>
+Shopify / Ecommerce
+</option>
+
+<option>
+Website Redesign
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>
+BUDGET
+</label>
+
+<select id="budget" required>
+
+<option value="">
+Select budget
+</option>
+
+<option>
+Under $1,000
+</option>
+
+<option>
+$1,000 - $2,500
+</option>
+
+<option>
+$2,500 - $5,000
+</option>
+
+<option>
+$5,000 - $10,000
+</option>
+
+<option>
+$10,000+
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field full">
+
+<label>
+TELL ME ABOUT THE PROJECT
+</label>
+
+<textarea
+id="message"
+placeholder="What do you want to build or improve?"
+required
+></textarea>
+
+</div>
+
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-primary"
+>
+Send Project Request on WhatsApp →
+</button>
+
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+FAQ
+====================================================== -->
 
 <section id="faq">
 
@@ -1465,7 +2386,7 @@ FAQ
 </div>
 
 <h2>
-Questions before starting.
+A few things you may want to know.
 </h2>
 
 </div>
@@ -1482,7 +2403,7 @@ Do you work with international clients?
 
 <p>
 Yes. Projects can be handled remotely through
-WhatsApp, email and online meetings.
+WhatsApp, email and online communication.
 </p>
 
 </details>
@@ -1491,13 +2412,13 @@ WhatsApp, email and online meetings.
 <details>
 
 <summary>
-How long does a website take?
+Can you build an AI application?
 </summary>
 
 <p>
-The timeline depends on the project scope.
-A focused website generally takes less time than
-a larger ecommerce or custom project.
+Yes. AI-related projects can include assistants,
+automation workflows, dashboards and custom digital
+experiences depending on the requirements.
 </p>
 
 </details>
@@ -1506,12 +2427,26 @@ a larger ecommerce or custom project.
 <details>
 
 <summary>
-Can you redesign my existing website?
+Can you build Shopify stores?
+</summary>
+
+<p>
+Yes. Shopify design, customization and ecommerce
+experiences are available.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Can you redesign an existing website?
 </summary>
 
 <p>
 Yes. Send the current website and explain what
-you want to improve, and the project scope can be discussed.
+you want changed, and the project can be scoped.
 </p>
 
 </details>
@@ -1520,12 +2455,12 @@ you want to improve, and the project scope can be discussed.
 <details>
 
 <summary>
-Do you build Shopify stores?
+How do I get a price?
 </summary>
 
 <p>
-Yes. Shopify design, customization and
-ecommerce-focused improvements are available.
+Use the project form above or contact WhatsApp.
+The final price depends on the exact requirements.
 </p>
 
 </details>
@@ -1534,12 +2469,12 @@ ecommerce-focused improvements are available.
 <details>
 
 <summary>
-How do I request a quote?
+Do you offer custom projects?
 </summary>
 
 <p>
-Click the WhatsApp button and send your business type,
-website link if available, what you need and your approximate budget.
+Yes. Custom websites, dashboards, SaaS concepts,
+AI systems and automation projects can be discussed.
 </p>
 
 </details>
@@ -1552,60 +2487,49 @@ website link if available, what you need and your approximate budget.
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- ======================================================
+FINAL CTA
+====================================================== -->
 
-<section class="cta" id="contact">
+<section class="final-cta">
 
 <div class="container">
 
 <div class="kicker">
-Let's Work Together
+Start Something Better
 </div>
 
 <h2>
-Let's build something
+Your next digital product
 <br>
 <span class="gold">
-worth clicking.
+starts with one message.
 </span>
 </h2>
 
 <p>
-Tell me what your business does, what you want to improve
-and what you want your website to achieve.
+Tell me what you want to build, redesign or automate.
+I'll help turn the idea into a clear project scope.
 </p>
 
 
-<div class="buttons">
+<div class="final-buttons">
 
 <a
 class="btn btn-primary"
 target="_blank"
-href="https://wa.me/93789155454?text=Hello%20Shuaib%2C%20I%27d%20like%20a%20website%20quote.%0A%0ABusiness%3A%20%0AWebsite%3A%20%0AWhat%20I%20need%3A%20%0ABudget%3A%20"
+href="https://wa.me/93789155454?text=Hello%20Shoaib%2C%20I%20want%20to%20start%20a%20project.%0A%0ABusiness%3A%20%0AProject%3A%20%0ABudget%3A%20"
 >
-WhatsApp for a Quote →
+Start on WhatsApp →
 </a>
 
 
 <a
 class="btn btn-secondary"
-href="mailto:janm62274@gmail.com?subject=Website%20Project%20Inquiry"
+href="mailto:janm62274@gmail.com?subject=New%20Digital%20Project"
 >
-Email Me
+Send Email
 </a>
-
-</div>
-
-
-<div class="contact-details">
-
-<span>
-📱 +93 789 155 454
-</span>
-
-<span>
-✉️ janm62274@gmail.com
-</span>
 
 </div>
 
@@ -1613,23 +2537,23 @@ Email Me
 
 </section>
 
-</main>
 
-
-<!-- ================= FOOTER ================= -->
+<!-- ======================================================
+FOOTER
+====================================================== -->
 
 <footer>
 
 <div class="container">
 
-<div class="footer-flex">
+<div class="footer">
 
 <div>
-© <span id="year"></span> SHUAIB. All rights reserved.
+© <span id="year"></span> SHOAIB. All rights reserved.
 </div>
 
 <div>
-Web Design • Shopify • Digital Experiences
+Web • AI • Automation • SaaS • Ecommerce
 </div>
 
 </div>
@@ -1639,56 +2563,177 @@ Web Design • Shopify • Digital Experiences
 </footer>
 
 
-<!-- WHATSAPP FLOAT -->
+<!-- ======================================================
+FLOATING WHATSAPP
+====================================================== -->
 
 <a
 class="whatsapp"
 target="_blank"
-aria-label="Chat on WhatsApp"
-href="https://wa.me/93789155454?text=Hello%20Shuaib%2C%20I%27d%20like%20to%20discuss%20a%20project."
+aria-label="WhatsApp"
+href="https://wa.me/93789155454?text=Hello%20Shoaib%2C%20I%27d%20like%20to%20discuss%20a%20project."
 >
 ☎
 </a>
 
 
+<!-- ======================================================
+JAVASCRIPT
+====================================================== -->
+
 <script>
 
-/* YEAR */
+/* =====================================================
+   CURRENT YEAR
+===================================================== */
 
 document.getElementById("year").textContent =
 new Date().getFullYear();
 
 
-/* MOBILE MENU */
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
 function toggleMenu(){
 
-document
-.getElementById("navLinks")
-.classList
-.toggle("open");
+    const menu =
+    document.getElementById("navLinks");
+
+    menu.classList.toggle("open");
 
 }
 
 
-/* CLOSE MENU */
+/* CLOSE MENU AFTER CLICK */
 
 document
 .querySelectorAll("#navLinks a")
 .forEach(function(link){
 
-link.addEventListener("click",function(){
+    link.addEventListener("click",function(){
 
-document
-.getElementById("navLinks")
-.classList
-.remove("open");
+        document
+        .getElementById("navLinks")
+        .classList
+        .remove("open");
+
+    });
 
 });
+
+
+/* =====================================================
+   PROJECT FORM → WHATSAPP
+===================================================== */
+
+function sendProject(event){
+
+    event.preventDefault();
+
+    const name =
+    document.getElementById("name").value.trim();
+
+    const business =
+    document.getElementById("business").value.trim();
+
+    const email =
+    document.getElementById("email").value.trim();
+
+    const website =
+    document.getElementById("website").value.trim();
+
+    const service =
+    document.getElementById("service").value;
+
+    const budget =
+    document.getElementById("budget").value;
+
+    const message =
+    document.getElementById("message").value.trim();
+
+
+    const whatsappMessage =
+`Hello Shoaib,
+
+I would like to discuss a project.
+
+Name: ${name}
+
+Business: ${business}
+
+Email: ${email}
+
+Website: ${website || "Not provided"}
+
+Service: ${service}
+
+Budget: ${budget}
+
+Project details:
+${message}
+
+I found your website and would like to discuss the next steps.`;
+
+
+    const whatsappURL =
+    "https://wa.me/93789155454?text=" +
+    encodeURIComponent(whatsappMessage);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+
+/* =====================================================
+   SIMPLE SCROLL REVEAL
+===================================================== */
+
+const revealElements =
+document.querySelectorAll(
+    ".service, .work-card, .price-card, .process-card, .feature-box"
+);
+
+
+const observer =
+new IntersectionObserver(
+    function(entries){
+
+        entries.forEach(function(entry){
+
+            if(entry.isIntersecting){
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    },
+    {
+        threshold:.08
+    }
+);
+
+
+revealElements.forEach(function(element){
+
+    element.style.opacity = "0";
+    element.style.transform = "translateY(15px)";
+    element.style.transition =
+    "opacity .6s ease, transform .6s ease";
+
+    observer.observe(element);
 
 });
 
 </script>
+
 
 </body>
 </html>
