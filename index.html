@@ -4,23 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Shoaib | Web & AI Developer. Websites, AI tools, automation, SaaS platforms and custom business solutions.">
-<meta name="keywords" content="Web Developer, AI Developer, AI Automation, SaaS, Business Websites, Web Applications">
-<meta name="author" content="Shoaib">
+<title>SHUAIB — Premium Web Design & Shopify</title>
 
-<title>Shoaib | Web & AI Developer</title>
+<meta name="description"
+content="Premium websites, Shopify stores and conversion-focused digital experiences for ambitious businesses worldwide.">
+
+<meta name="keywords"
+content="web design, website development, Shopify, Shopify designer, landing page, ecommerce, Dubai web design, UAE web design">
+
+<meta name="author" content="SHUAIB">
 
 <style>
+
 :root{
-    --bg:#070a12;
-    --card:#101522;
-    --card2:#151b2b;
-    --text:#f5f7ff;
-    --muted:#a9b1c5;
+    --bg:#070809;
+    --bg2:#0d0f12;
+    --card:#111419;
+    --card2:#161a20;
+    --text:#f7f7f4;
+    --muted:#9da3ad;
+    --gold:#d9b46c;
+    --gold2:#f1d79e;
     --line:rgba(255,255,255,.09);
-    --accent:#6c63ff;
-    --accent2:#00d4ff;
-    --success:#25d366;
+    --green:#25D366;
     --max:1180px;
 }
 
@@ -32,12 +38,9 @@
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:
-        radial-gradient(circle at 10% 10%,rgba(108,99,255,.16),transparent 30%),
-        radial-gradient(circle at 90% 20%,rgba(0,212,255,.10),transparent 30%),
-        var(--bg);
+    background:var(--bg);
     color:var(--text);
+    font-family:Arial,Helvetica,sans-serif;
     line-height:1.6;
 }
 
@@ -47,9 +50,11 @@ a{
 }
 
 .container{
-    width:min(92%,var(--max));
+    width:min(var(--max),92%);
     margin:auto;
 }
+
+/* ================= HEADER ================= */
 
 header{
     position:fixed;
@@ -57,42 +62,51 @@ header{
     left:0;
     width:100%;
     z-index:1000;
-    background:rgba(7,10,18,.82);
-    backdrop-filter:blur(15px);
+    background:rgba(7,8,9,.82);
+    backdrop-filter:blur(18px);
     border-bottom:1px solid var(--line);
 }
 
-.nav{
-    min-height:72px;
+nav{
+    height:76px;
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
 .logo{
-    font-size:21px;
-    font-weight:800;
-    letter-spacing:.5px;
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:2px;
 }
 
 .logo span{
-    color:var(--accent2);
+    color:var(--gold);
 }
 
 .nav-links{
     display:flex;
-    gap:25px;
+    gap:27px;
     list-style:none;
 }
 
 .nav-links a{
-    color:var(--muted);
+    color:#c8ccd2;
     font-size:14px;
-    transition:.3s;
+    transition:.25s;
 }
 
 .nav-links a:hover{
-    color:#fff;
+    color:var(--gold2);
+}
+
+.nav-cta{
+    padding:11px 18px;
+    border:1px solid var(--gold);
+    color:var(--gold2);
+    border-radius:999px;
+    font-size:13px;
+    font-weight:bold;
 }
 
 .menu{
@@ -101,1152 +115,1579 @@ header{
     cursor:pointer;
 }
 
+/* ================= HERO ================= */
+
 .hero{
     min-height:100vh;
+    padding:145px 0 90px;
     display:flex;
     align-items:center;
-    padding:120px 0 70px;
+    background:
+    radial-gradient(circle at 80% 20%,rgba(217,180,108,.17),transparent 30%),
+    radial-gradient(circle at 10% 70%,rgba(255,255,255,.04),transparent 25%);
 }
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:60px;
+    grid-template-columns:1.15fr .85fr;
+    gap:70px;
     align-items:center;
 }
 
 .badge{
-    display:inline-block;
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
     padding:8px 14px;
-    border:1px solid var(--line);
-    background:rgba(255,255,255,.04);
+    border:1px solid rgba(217,180,108,.35);
+    background:rgba(217,180,108,.07);
     border-radius:50px;
-    color:#cbd2e5;
-    font-size:13px;
-    margin-bottom:20px;
+    color:var(--gold2);
+    font-size:12px;
+    font-weight:bold;
+}
+
+.badge-dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#53dc78;
+    box-shadow:0 0 12px #53dc78;
 }
 
 h1{
-    font-size:clamp(42px,7vw,78px);
-    line-height:1.02;
-    letter-spacing:-3px;
-    margin-bottom:22px;
+    font-size:clamp(48px,7vw,84px);
+    line-height:.97;
+    letter-spacing:-4px;
+    margin:26px 0;
 }
 
-.gradient{
-    background:linear-gradient(90deg,var(--accent),var(--accent2));
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
+.gold{
+    color:var(--gold);
 }
 
-.hero p{
-    max-width:680px;
+.hero-text{
+    max-width:650px;
     color:var(--muted);
     font-size:18px;
-    margin-bottom:30px;
 }
 
 .buttons{
     display:flex;
     flex-wrap:wrap;
     gap:13px;
+    margin-top:30px;
 }
 
 .btn{
     display:inline-flex;
-    justify-content:center;
     align-items:center;
-    padding:13px 20px;
-    border-radius:12px;
-    font-weight:700;
+    justify-content:center;
+    padding:14px 22px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:800;
     border:1px solid var(--line);
-    transition:.3s;
-    cursor:pointer;
+    transition:.25s;
 }
 
 .btn-primary{
-    background:linear-gradient(135deg,var(--accent),#4d8cff);
-    border:none;
+    background:var(--gold);
+    color:#111;
 }
 
-.btn-primary:hover,
-.btn-secondary:hover{
+.btn-primary:hover{
+    background:var(--gold2);
     transform:translateY(-3px);
 }
 
 .btn-secondary{
-    background:rgba(255,255,255,.04);
+    background:var(--card);
 }
 
-.btn-whatsapp{
-    background:rgba(37,211,102,.12);
-    border-color:rgba(37,211,102,.3);
-    color:#75ed9d;
+.btn-secondary:hover{
+    border-color:var(--gold);
+    transform:translateY(-3px);
 }
 
-.hero-card{
-    padding:30px;
+/* ================= HERO VISUAL ================= */
+
+.visual{
+    position:relative;
+}
+
+.browser{
+    background:#101216;
     border:1px solid var(--line);
-    border-radius:25px;
-    background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
-    box-shadow:0 30px 80px rgba(0,0,0,.35);
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 35px 100px rgba(0,0,0,.55);
+    transform:rotate(1deg);
 }
 
-.profile-circle{
-    width:125px;
-    height:125px;
-    border-radius:50%;
+.browser-top{
+    height:42px;
     display:flex;
-    justify-content:center;
     align-items:center;
-    margin:0 auto 22px;
-    font-size:40px;
-    font-weight:900;
-    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    gap:7px;
+    padding:0 15px;
+    border-bottom:1px solid var(--line);
 }
 
-.hero-card h3{
-    text-align:center;
-    margin-bottom:5px;
+.browser-top i{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#555;
 }
 
-.hero-card p{
-    text-align:center;
-    font-size:14px;
-    margin:0;
+.browser-content{
+    min-height:390px;
+    padding:35px;
+    background:
+    radial-gradient(circle at 90% 10%,rgba(217,180,108,.12),transparent 30%),
+    linear-gradient(145deg,#171a20,#0c0e11);
 }
 
-.stats{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
-    margin-top:25px;
+.browser-label{
+    color:var(--gold2);
+    font-size:10px;
+    letter-spacing:2px;
+    font-weight:bold;
 }
 
-.stat{
-    text-align:center;
-    padding:14px 8px;
-    background:rgba(255,255,255,.04);
-    border-radius:14px;
+.browser-content h3{
+    font-size:35px;
+    line-height:1.05;
+    margin:18px 0;
 }
 
-.stat strong{
-    display:block;
-    font-size:21px;
+.fake-line{
+    height:8px;
+    width:80%;
+    background:#292e36;
+    border-radius:20px;
+    margin:9px 0;
 }
 
-.stat span{
-    font-size:11px;
-    color:var(--muted);
+.fake-line.short{
+    width:50%;
 }
 
-section{
-    padding:95px 0;
-}
-
-.section-title{
-    text-align:center;
-    max-width:700px;
-    margin:0 auto 45px;
-}
-
-.section-title h2{
-    font-size:40px;
-    margin-bottom:12px;
-}
-
-.section-title p{
-    color:var(--muted);
-}
-
-.about-grid{
+.fake-cards{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:30px;
+    gap:12px;
+    margin-top:30px;
+}
+
+.fake-card{
+    height:90px;
+    border-radius:12px;
+    border:1px solid var(--line);
+    background:#12151a;
+}
+
+/* ================= TRUST BAR ================= */
+
+.trust{
+    padding:22px 0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    text-align:center;
+    color:#858b95;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* ================= GENERAL ================= */
+
+section{
+    padding:105px 0;
+}
+
+.dark{
+    background:var(--bg2);
+}
+
+.section-head{
+    max-width:720px;
+    margin-bottom:50px;
+}
+
+.kicker{
+    color:var(--gold);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.section-head h2{
+    font-size:clamp(36px,5vw,58px);
+    line-height:1.04;
+    letter-spacing:-2px;
+    margin:12px 0;
+}
+
+.section-head p{
+    color:var(--muted);
+}
+
+/* ================= SERVICES ================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:17px;
 }
 
 .card{
-    background:rgba(255,255,255,.04);
+    background:var(--card);
     border:1px solid var(--line);
-    border-radius:20px;
-    padding:28px;
+    border-radius:18px;
+    padding:30px;
     transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    border-color:rgba(108,99,255,.4);
+    transform:translateY(-7px);
+    border-color:rgba(217,180,108,.5);
+}
+
+.icon{
+    color:var(--gold2);
+    font-size:24px;
+    margin-bottom:20px;
 }
 
 .card h3{
-    margin-bottom:12px;
+    font-size:20px;
+    margin-bottom:10px;
 }
 
 .card p{
     color:var(--muted);
+    font-size:14px;
 }
 
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:9px;
-    margin-top:20px;
-}
+/* ================= PORTFOLIO ================= */
 
-.skill{
-    padding:8px 12px;
-    background:rgba(255,255,255,.06);
-    border:1px solid var(--line);
-    border-radius:9px;
-    font-size:13px;
-}
-
-.services-grid{
+.portfolio{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:1fr 1fr;
     gap:18px;
-}
-
-.service{
-    min-height:210px;
-}
-
-.icon{
-    width:50px;
-    height:50px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:14px;
-    background:rgba(108,99,255,.14);
-    font-size:23px;
-    margin-bottom:20px;
-}
-
-.portfolio-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
 }
 
 .project{
+    min-height:340px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:30px;
+    display:flex;
+    align-items:flex-end;
+    position:relative;
     overflow:hidden;
+    background:linear-gradient(135deg,#272c34,#101216);
 }
 
-.project-top{
-    height:190px;
-    border-radius:15px;
-    background:
-        linear-gradient(135deg,rgba(108,99,255,.4),rgba(0,212,255,.16)),
-        #111827;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-    font-weight:800;
-    margin-bottom:22px;
+.project:nth-child(2){
+    background:linear-gradient(135deg,#3d301e,#101216);
 }
 
-.project p{
-    margin-bottom:18px;
+.project:nth-child(3){
+    background:linear-gradient(135deg,#1c303d,#101216);
 }
 
-.tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:7px;
-    margin-bottom:20px;
+.project:nth-child(4){
+    background:linear-gradient(135deg,#30233e,#101216);
 }
 
-.tag{
-    color:#bfc7dc;
-    font-size:12px;
-    padding:5px 9px;
-    border-radius:7px;
+.project:before{
+    content:"";
+    position:absolute;
+    width:230px;
+    height:230px;
+    right:-80px;
+    top:-80px;
+    border-radius:50%;
     background:rgba(255,255,255,.05);
 }
 
-.process{
+.project-content{
+    position:relative;
+    z-index:2;
+}
+
+.project-content small{
+    color:var(--gold2);
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.project-content h3{
+    font-size:28px;
+    margin:6px 0;
+}
+
+.project-content p{
+    color:#b4bac3;
+    font-size:13px;
+}
+
+/* ================= RESULTS ================= */
+
+.results{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:18px;
+    gap:17px;
+}
+
+.result{
+    padding:30px;
+    border:1px solid var(--line);
+    background:var(--card);
+    border-radius:18px;
+}
+
+.result strong{
+    display:block;
+    color:var(--gold);
+    font-size:34px;
+    margin-bottom:5px;
+}
+
+.result span{
+    color:#aaa;
+    font-size:13px;
+}
+
+/* ================= PROCESS ================= */
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.step{
+    padding:24px;
+    border-top:1px solid var(--line);
 }
 
 .step-number{
-    font-size:35px;
+    color:var(--gold);
+    font-size:12px;
     font-weight:900;
-    color:var(--accent2);
-    margin-bottom:10px;
 }
+
+.step h3{
+    margin:17px 0 8px;
+}
+
+.step p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* ================= PRICING ================= */
 
 .pricing{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    gap:17px;
 }
 
 .price-card{
-    position:relative;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:31px;
 }
 
 .price-card.featured{
-    border-color:rgba(108,99,255,.65);
-    box-shadow:0 20px 60px rgba(108,99,255,.12);
+    border-color:var(--gold);
+    box-shadow:0 25px 80px rgba(217,180,108,.08);
+}
+
+.price-label{
+    color:var(--gold2);
+    font-size:11px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
 }
 
 .price{
-    font-size:28px;
-    font-weight:800;
-    margin:15px 0;
+    font-size:43px;
+    font-weight:900;
+    margin:12px 0;
 }
 
 .price small{
-    color:var(--muted);
-    font-size:13px;
+    font-size:12px;
+    color:#777;
     font-weight:normal;
 }
 
-.price-list{
-    list-style:none;
-    margin:20px 0;
-}
-
-.price-list li{
-    padding:8px 0;
-    color:var(--muted);
-    font-size:14px;
-}
-
-.price-list li::before{
-    content:"✓ ";
-    color:#6ee7a0;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:25px;
-}
-
-.contact-info{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-.contact-item{
-    padding:20px;
-    border:1px solid var(--line);
-    border-radius:15px;
-    background:rgba(255,255,255,.035);
-}
-
-.contact-item span{
-    display:block;
+.price-description{
     color:var(--muted);
     font-size:13px;
 }
 
-.contact-item strong{
-    display:block;
-    margin-top:4px;
+.features{
+    list-style:none;
+    margin:24px 0;
 }
 
-form{
-    display:grid;
-    gap:14px;
+.features li{
+    color:#c5c8ce;
+    font-size:13px;
+    margin:11px 0;
 }
 
-input,
-select,
-textarea{
-    width:100%;
-    padding:14px 15px;
-    background:#0b0f19;
+.features li:before{
+    content:"✓";
+    color:var(--gold);
+    font-weight:bold;
+    margin-right:9px;
+}
+
+/* ================= FAQ ================= */
+
+.faq{
+    max-width:850px;
+}
+
+details{
+    background:var(--card);
     border:1px solid var(--line);
-    border-radius:11px;
-    color:#fff;
-    outline:none;
-    font:inherit;
+    border-radius:13px;
+    padding:19px 20px;
+    margin-bottom:10px;
 }
 
-textarea{
-    min-height:150px;
-    resize:vertical;
+summary{
+    cursor:pointer;
+    font-weight:bold;
 }
 
-input:focus,
-select:focus,
-textarea:focus{
-    border-color:var(--accent);
+details p{
+    color:var(--muted);
+    font-size:13px;
+    margin-top:12px;
 }
+
+/* ================= CTA ================= */
+
+.cta{
+    padding:125px 0;
+    text-align:center;
+    background:
+    radial-gradient(circle at 50% 0,rgba(217,180,108,.18),transparent 34%),
+    var(--bg2);
+}
+
+.cta h2{
+    font-size:clamp(43px,6vw,72px);
+    line-height:1;
+    letter-spacing:-3px;
+    margin:14px 0 20px;
+}
+
+.cta p{
+    max-width:650px;
+    margin:auto;
+    color:var(--muted);
+}
+
+.cta .buttons{
+    justify-content:center;
+}
+
+.contact-details{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:22px;
+    margin-top:25px;
+    color:#a7abb3;
+    font-size:13px;
+}
+
+/* ================= FOOTER ================= */
 
 footer{
-    padding:35px 0;
     border-top:1px solid var(--line);
-    text-align:center;
+    padding:28px 0;
+    color:#777;
+    font-size:12px;
 }
 
-footer p{
-    color:var(--muted);
-    font-size:13px;
+.footer-flex{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
 }
 
-.whatsapp-float{
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
     position:fixed;
     right:20px;
     bottom:20px;
-    width:58px;
-    height:58px;
+    width:59px;
+    height:59px;
     border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:var(--success);
-    color:#fff;
+    background:var(--green);
+    color:white;
+    display:grid;
+    place-items:center;
     font-size:25px;
-    z-index:900;
-    box-shadow:0 12px 30px rgba(37,211,102,.25);
+    z-index:999;
+    box-shadow:0 10px 35px rgba(37,211,102,.3);
+    transition:.25s;
 }
 
-.reveal{
-    opacity:0;
-    transform:translateY(25px);
-    transition:opacity .7s ease,transform .7s ease;
+.whatsapp:hover{
+    transform:scale(1.08);
 }
 
-.reveal.show{
-    opacity:1;
-    transform:translateY(0);
-}
+/* ================= MOBILE ================= */
 
 @media(max-width:850px){
-    .nav-links{
-        position:absolute;
-        top:72px;
-        left:0;
-        width:100%;
-        display:none;
-        flex-direction:column;
-        padding:20px;
-        background:#090d16;
-        border-bottom:1px solid var(--line);
-    }
 
-    .nav-links.active{
-        display:flex;
+    .nav-links,
+    .nav-cta{
+        display:none;
     }
 
     .menu{
         display:block;
     }
 
-    .hero-grid,
-    .about-grid,
-    .contact-grid{
+    .nav-links.open{
+        display:flex;
+        position:absolute;
+        left:0;
+        top:76px;
+        width:100%;
+        padding:24px;
+        background:#08090b;
+        flex-direction:column;
+        border-bottom:1px solid var(--line);
+    }
+
+    .hero-grid{
         grid-template-columns:1fr;
     }
 
-    .services-grid,
-    .process,
-    .pricing{
+    .cards,
+    .pricing,
+    .results{
+        grid-template-columns:1fr;
+    }
+
+    .portfolio{
+        grid-template-columns:1fr;
+    }
+
+    .process{
         grid-template-columns:1fr 1fr;
     }
+
 }
 
-@media(max-width:600px){
+@media(max-width:520px){
+
+    section{
+        padding:78px 0;
+    }
+
     h1{
         letter-spacing:-2px;
     }
 
-    .hero{
-        padding-top:110px;
+    .browser{
+        transform:none;
     }
 
-    .hero p{
-        font-size:16px;
-    }
-
-    section{
-        padding:70px 0;
-    }
-
-    .section-title h2{
-        font-size:31px;
-    }
-
-    .services-grid,
-    .portfolio-grid,
-    .process,
-    .pricing{
+    .process{
         grid-template-columns:1fr;
     }
 
-    .stats{
-        grid-template-columns:1fr 1fr 1fr;
+    .footer-flex{
+        flex-direction:column;
+        text-align:center;
     }
 
-    .btn{
-        width:100%;
+    .browser-content{
+        min-height:310px;
+        padding:25px;
     }
+
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
-    <div class="container nav">
-        <a href="#home" class="logo">Shoaib<span>.</span></a>
 
-        <div class="menu" id="menu">☰</div>
+<div class="container">
 
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
+<nav>
+
+<a href="#home" class="logo">
+SHUAIB<span>.</span>
+</a>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="#services">Services</a></li>
+<li><a href="#work">Work</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<a
+class="nav-cta"
+target="_blank"
+href="https://wa.me/93789155454?text=Hello%20Shuaib%2C%20I%27d%20like%20to%20discuss%20a%20website%20project."
+>
+Start a Project
+</a>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+</nav>
+
+</div>
+
 </header>
 
-<main>
+
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
-    <div class="container hero-grid">
 
-        <div class="reveal">
-            <div class="badge">Available for International Projects</div>
+<div class="container">
 
-            <h1>
-                I Build
-                <span class="gradient">Web & AI</span>
-                Solutions for Businesses.
-            </h1>
+<div class="hero-grid">
 
-            <p>
-                I design and develop modern websites, web applications,
-                AI tools, automation systems, dashboards and custom digital
-                solutions for businesses and organizations.
-            </p>
+<div>
 
-            <div class="buttons">
-                <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Start a Project</a>
-                <a href="https://wa.me/93789155454?text=Hello%20Shoaib%2C%20I%27m%20interested%20in%20working%20with%20you." target="_blank" class="btn btn-whatsapp">
-                    WhatsApp Me
-                </a>
-            </div>
-        </div>
+<div class="badge">
 
-        <div class="hero-card reveal">
-            <div class="profile-circle">S</div>
-            <h3>Shoaib</h3>
-            <p>Web & AI Developer</p>
+<span class="badge-dot"></span>
 
-            <div class="stats">
-                <div class="stat">
-                    <strong>Web</strong>
-                    <span>Development</span>
-                </div>
+Available for selected international projects
 
-                <div class="stat">
-                    <strong>AI</strong>
-                    <span>Solutions</span>
-                </div>
+</div>
 
-                <div class="stat">
-                    <strong>SaaS</strong>
-                    <span>Platforms</span>
-                </div>
-            </div>
-        </div>
+<h1>
 
-    </div>
+Your website should look as valuable as your
+
+<span class="gold">business.</span>
+
+</h1>
+
+<p class="hero-text">
+
+I create premium websites and Shopify experiences
+for ambitious businesses that want stronger credibility,
+clearer messaging and more enquiries.
+
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-primary"
+target="_blank"
+href="https://wa.me/93789155454?text=Hello%20Shuaib%2C%20I%27d%20like%20to%20request%20a%20website%20quote."
+>
+Get a Project Quote →
+</a>
+
+<a
+class="btn btn-secondary"
+href="#work"
+>
+View Selected Work
+</a>
+
+</div>
+
+</div>
+
+
+<!-- HERO MOCKUP -->
+
+<div class="visual">
+
+<div class="browser">
+
+<div class="browser-top">
+
+<i></i>
+<i></i>
+<i></i>
+
+</div>
+
+<div class="browser-content">
+
+<div class="browser-label">
+
+PREMIUM DIGITAL EXPERIENCE
+
+</div>
+
+<h3>
+
+Build trust before the first conversation.
+
+</h3>
+
+<div class="fake-line"></div>
+<div class="fake-line short"></div>
+
+<div class="fake-cards">
+
+<div class="fake-card"></div>
+<div class="fake-card"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="about">
-    <div class="container">
 
-        <div class="section-title reveal">
-            <h2>About Me</h2>
-            <p>
-                Building digital products that combine modern design,
-                technology and business value.
-            </p>
-        </div>
+<!-- TRUST -->
 
-        <div class="about-grid">
+<div class="trust">
 
-            <div class="card reveal">
-                <h3>Who I Am</h3>
-                <p>
-                    I'm Shoaib, a Web & AI Developer focused on creating
-                    modern digital experiences and business-focused
-                    technology solutions.
-                </p>
+Web Design • Shopify • Ecommerce • Landing Pages • Redesign • Conversion
 
-                <div class="skills">
-                    <span class="skill">Web Development</span>
-                    <span class="skill">AI Solutions</span>
-                    <span class="skill">Automation</span>
-                    <span class="skill">SaaS</span>
-                    <span class="skill">Dashboards</span>
-                    <span class="skill">Responsive Design</span>
-                </div>
-            </div>
+</div>
 
-            <div class="card reveal">
-                <h3>My Approach</h3>
-                <p>
-                    Every project starts with understanding the business
-                    objective. I focus on clean interfaces, useful
-                    functionality, responsive experiences and scalable
-                    solutions.
-                </p>
-            </div>
 
-        </div>
-    </div>
+<!-- ================= SERVICES ================= -->
+
+<section id="services" class="dark">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="kicker">
+Services
+</div>
+
+<h2>
+Everything needed for a stronger digital presence.
+</h2>
+
+<p>
+A focused combination of strategy, design and development
+to help your business communicate clearly online.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icon">◈</div>
+
+<h3>
+Premium Websites
+</h3>
+
+<p>
+Modern websites designed to make your company
+look professional, trustworthy and established.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">◆</div>
+
+<h3>
+Shopify Stores
+</h3>
+
+<p>
+Clean ecommerce experiences with better product
+presentation, navigation and customer journeys.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">↗</div>
+
+<h3>
+Landing Pages
+</h3>
+
+<p>
+Focused pages for products, services and advertising
+campaigns with one clear customer action.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">⚡</div>
+
+<h3>
+Website Redesign
+</h3>
+
+<p>
+Turn an outdated website into a modern,
+responsive and more credible experience.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">⌕</div>
+
+<h3>
+SEO Foundation
+</h3>
+
+<p>
+Clean structure, metadata and page foundations
+that help search engines understand your website.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">◎</div>
+
+<h3>
+Conversion Setup
+</h3>
+
+<p>
+Clear calls-to-action and enquiry paths designed
+to make it easier for visitors to contact you.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="services">
-    <div class="container">
 
-        <div class="section-title reveal">
-            <h2>My Services</h2>
-            <p>Digital solutions designed around your business needs.</p>
-        </div>
+<!-- ================= WORK ================= -->
 
-        <div class="services-grid">
+<section id="work">
 
-            <div class="card service reveal">
-                <div class="icon">🌐</div>
-                <h3>Business Websites</h3>
-                <p>
-                    Professional, responsive websites designed to establish
-                    your brand online and generate business opportunities.
-                </p>
-            </div>
+<div class="container">
 
-            <div class="card service reveal">
-                <div class="icon">🤖</div>
-                <h3>AI Solutions</h3>
-                <p>
-                    AI-powered tools and business experiences designed to
-                    improve productivity and customer interaction.
-                </p>
-            </div>
+<div class="section-head">
 
-            <div class="card service reveal">
-                <div class="icon">⚙️</div>
-                <h3>AI Automation</h3>
-                <p>
-                    Automation systems that help businesses reduce repetitive
-                    work and streamline operations.
-                </p>
-            </div>
+<div class="kicker">
+Selected Concepts
+</div>
 
-            <div class="card service reveal">
-                <div class="icon">📊</div>
-                <h3>Dashboards</h3>
-                <p>
-                    Modern management dashboards for analytics, operations,
-                    CRM and internal business workflows.
-                </p>
-            </div>
+<h2>
+Design that communicates value in seconds.
+</h2>
 
-            <div class="card service reveal">
-                <div class="icon">🚀</div>
-                <h3>SaaS Platforms</h3>
-                <p>
-                    Web-based software platforms with modern interfaces and
-                    business-focused functionality.
-                </p>
-            </div>
+<p>
+These concept projects can be replaced with real client
+projects as your portfolio grows.
+</p>
 
-            <div class="card service reveal">
-                <div class="icon">💡</div>
-                <h3>Custom Solutions</h3>
-                <p>
-                    Custom web and digital solutions built around unique
-                    business requirements.
-                </p>
-            </div>
+</div>
 
-        </div>
-    </div>
+
+<div class="portfolio">
+
+
+<div class="project">
+
+<div class="project-content">
+
+<small>
+Luxury Business
+</small>
+
+<h3>
+Executive Brand
+</h3>
+
+<p>
+Premium corporate website concept for a high-value service business.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-content">
+
+<small>
+Ecommerce
+</small>
+
+<h3>
+Luxury Fashion
+</h3>
+
+<p>
+Editorial-inspired storefront focused on products and trust.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-content">
+
+<small>
+Hospitality
+</small>
+
+<h3>
+Modern Restaurant
+</h3>
+
+<p>
+Conversion-focused experience for bookings and enquiries.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-content">
+
+<small>
+Professional Services
+</small>
+
+<h3>
+Global Consultancy
+</h3>
+
+<p>
+Clear positioning and lead-generation structure for an international firm.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="portfolio">
-    <div class="container">
 
-        <div class="section-title reveal">
-            <h2>Selected Projects</h2>
-            <p>A selection of digital products and concepts.</p>
-        </div>
+<!-- ================= RESULTS ================= -->
 
-        <div class="portfolio-grid">
+<section class="dark">
 
-            <div class="card project reveal">
-                <div class="project-top">SHIZAZ Enterprise AI</div>
+<div class="container">
 
-                <h3>Enterprise AI Platform</h3>
+<div class="section-head">
 
-                <p>
-                    An enterprise-focused management platform concept
-                    combining AI automation, analytics, CRM, finance,
-                    workforce and cybersecurity.
-                </p>
+<div class="kicker">
+What the website is built to improve
+</div>
 
-                <div class="tags">
-                    <span class="tag">AI</span>
-                    <span class="tag">Enterprise</span>
-                    <span class="tag">Dashboard</span>
-                    <span class="tag">Automation</span>
-                </div>
+<h2>
+The goal is not just a beautiful website.
+</h2>
 
-                <a href="https://anmt3878-rgb.github.io/shizaz-enterprise/" target="_blank" class="btn btn-secondary">
-                    View Project
-                </a>
-            </div>
+<p>
+The website should make it easier for the right visitor
+to understand your business and take the next step.
+</p>
 
-            <div class="card project reveal">
-                <div class="project-top">SHIZAZ CyberGuard</div>
+</div>
 
-                <h3>Cybersecurity Platform</h3>
 
-                <p>
-                    A cybersecurity management dashboard concept for
-                    monitoring threats, incidents, endpoints,
-                    vulnerabilities and reports.
-                </p>
+<div class="results">
 
-                <div class="tags">
-                    <span class="tag">Cybersecurity</span>
-                    <span class="tag">Dashboard</span>
-                    <span class="tag">Security</span>
-                </div>
+<div class="result">
 
-                <a href="https://anmt3878-rgb.github.io/Shoaib/" target="_blank" class="btn btn-secondary">
-                    View Project
-                </a>
-            </div>
+<strong>01</strong>
 
-            <div class="card project reveal">
-                <div class="project-top">Insurance AI</div>
+<span>
+Clearer positioning
+</span>
 
-                <h3>Insurance AI Dashboard</h3>
+</div>
 
-                <p>
-                    An insurance-focused platform concept with leads,
-                    AI conversations, scoring, follow-ups, appointments
-                    and analytics.
-                </p>
 
-                <div class="tags">
-                    <span class="tag">Insurance</span>
-                    <span class="tag">AI</span>
-                    <span class="tag">CRM</span>
-                </div>
+<div class="result">
 
-                <a href="https://anmt3878-rgb.github.io/shizaz-enterprise/" target="_blank" class="btn btn-secondary">
-                    View Project
-                </a>
-            </div>
+<strong>02</strong>
 
-            <div class="card project reveal">
-                <div class="project-top">Business Website</div>
+<span>
+Stronger first impression
+</span>
 
-                <h3>Business Website</h3>
+</div>
 
-                <p>
-                    A modern responsive business website concept focused on
-                    professional presentation and customer conversion.
-                </p>
 
-                <div class="tags">
-                    <span class="tag">Website</span>
-                    <span class="tag">Responsive</span>
-                    <span class="tag">Business</span>
-                </div>
+<div class="result">
 
-                <a href="https://anmt3878-rgb.github.io/Business-Website/" target="_blank" class="btn btn-secondary">
-                    View Project
-                </a>
-            </div>
+<strong>03</strong>
 
-            <div class="card project reveal">
-                <div class="project-top">Restaurant Website</div>
+<span>
+Simpler enquiry journey
+</span>
 
-                <h3>Restaurant Website</h3>
+</div>
 
-                <p>
-                    A restaurant website concept with a modern visual
-                    presentation for menus, services and customer engagement.
-                </p>
+</div>
 
-                <div class="tags">
-                    <span class="tag">Restaurant</span>
-                    <span class="tag">Website</span>
-                    <span class="tag">UI/UX</span>
-                </div>
+</div>
 
-                <a href="https://anmt3878-rgb.github.io/Restaurant-Website/" target="_blank" class="btn btn-secondary">
-                    View Project
-                </a>
-            </div>
-
-        </div>
-    </div>
 </section>
+
+
+<!-- ================= PROCESS ================= -->
 
 <section id="process">
-    <div class="container">
 
-        <div class="section-title reveal">
-            <h2>How I Work</h2>
-            <p>A simple and professional process from idea to launch.</p>
-        </div>
+<div class="container">
 
-        <div class="process">
+<div class="section-head">
 
-            <div class="card reveal">
-                <div class="step-number">01</div>
-                <h3>Discovery</h3>
-                <p>
-                    Understand the business, goals, audience and project
-                    requirements.
-                </p>
-            </div>
+<div class="kicker">
+Process
+</div>
 
-            <div class="card reveal">
-                <div class="step-number">02</div>
-                <h3>Planning</h3>
-                <p>
-                    Define the structure, features, user experience and
-                    development plan.
-                </p>
-            </div>
+<h2>
+From idea to launch without the confusion.
+</h2>
 
-            <div class="card reveal">
-                <div class="step-number">03</div>
-                <h3>Design</h3>
-                <p>
-                    Create a modern interface and responsive experience.
-                </p>
-            </div>
+</div>
 
-            <div class="card reveal">
-                <div class="step-number">04</div>
-                <h3>Development</h3>
-                <p>
-                    Build the required website, application or digital
-                    solution.
-                </p>
-            </div>
 
-            <div class="card reveal">
-                <div class="step-number">05</div>
-                <h3>Testing</h3>
-                <p>
-                    Test responsiveness, functionality and the overall
-                    experience.
-                </p>
-            </div>
+<div class="process">
 
-            <div class="card reveal">
-                <div class="step-number">06</div>
-                <h3>Launch</h3>
-                <p>
-                    Deliver the completed project and prepare it for use.
-                </p>
-            </div>
 
-        </div>
-    </div>
+<div class="step">
+
+<div class="step-number">
+01 — DISCOVER
+</div>
+
+<h3>
+Understand
+</h3>
+
+<p>
+We discuss your business, audience, offer,
+goals and requirements.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+02 — DESIGN
+</div>
+
+<h3>
+Shape
+</h3>
+
+<p>
+We create the visual direction, structure
+and customer journey.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+03 — BUILD
+</div>
+
+<h3>
+Develop
+</h3>
+
+<p>
+The approved experience becomes a responsive
+working website.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+04 — LAUNCH
+</div>
+
+<h3>
+Improve
+</h3>
+
+<p>
+Final checks, publishing and practical
+optimization before launch.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
 
-<section id="pricing">
-    <div class="container">
 
-        <div class="section-title reveal">
-            <h2>Project Options</h2>
-            <p>
-                Every project is different. Final pricing depends on scope,
-                features and requirements.
-            </p>
-        </div>
+<!-- ================= PRICING ================= -->
 
-        <div class="pricing">
+<section id="pricing" class="dark">
 
-            <div class="card price-card reveal">
-                <h3>Business Website</h3>
-                <div class="price">Custom <small>quote</small></div>
+<div class="container">
 
-                <ul class="price-list">
-                    <li>Professional design</li>
-                    <li>Responsive layout</li>
-                    <li>Business sections</li>
-                    <li>Contact integration</li>
-                    <li>Deployment support</li>
-                </ul>
+<div class="section-head">
 
-                <a href="#contact" class="btn btn-secondary">Request Quote</a>
-            </div>
+<div class="kicker">
+Starting Investment
+</div>
 
-            <div class="card price-card featured reveal">
-                <h3>Web / AI Solution</h3>
-                <div class="price">Custom <small>quote</small></div>
+<h2>
+Choose a direction. Then we tailor the scope.
+</h2>
 
-                <ul class="price-list">
-                    <li>Custom functionality</li>
-                    <li>Modern dashboard</li>
-                    <li>AI features when required</li>
-                    <li>Business automation</li>
-                    <li>Custom integrations</li>
-                </ul>
+<p>
+These are starting prices. Final pricing depends on
+pages, features, integrations and project requirements.
+</p>
 
-                <a href="#contact" class="btn btn-primary">Discuss Project</a>
-            </div>
+</div>
 
-            <div class="card price-card reveal">
-                <h3>Enterprise</h3>
-                <div class="price">Custom <small>quote</small></div>
 
-                <ul class="price-list">
-                    <li>Large-scale platform</li>
-                    <li>Advanced dashboards</li>
-                    <li>Automation</li>
-                    <li>Custom business systems</li>
-                    <li>Project-specific architecture</li>
-                </ul>
+<div class="pricing">
 
-                <a href="#contact" class="btn btn-secondary">Start Discussion</a>
-            </div>
 
-        </div>
-    </div>
+<!-- STARTER -->
+
+<div class="price-card">
+
+<div class="price-label">
+Starter
+</div>
+
+<div class="price">
+$1,000
+<small>starting</small>
+</div>
+
+<p class="price-description">
+For businesses that need a focused professional presence.
+</p>
+
+<ul class="features">
+
+<li>Responsive website</li>
+<li>Core pages</li>
+<li>WhatsApp / contact CTA</li>
+<li>Basic SEO setup</li>
+<li>Launch support</li>
+
+</ul>
+
+<a
+class="btn btn-secondary"
+target="_blank"
+href="https://wa.me/93789155454?text=Hello%20Shuaib%2C%20I%27m%20interested%20in%20the%20Starter%20package."
+>
+Discuss Starter
+</a>
+
+</div>
+
+
+<!-- BUSINESS -->
+
+<div class="price-card featured">
+
+<div class="price-label">
+Business
+</div>
+
+<div class="price">
+$2,500
+<small>starting</small>
+</div>
+
+<p class="price-description">
+For businesses that need a stronger digital presence.
+</p>
+
+<ul class="features">
+
+<li>Premium custom design</li>
+<li>Multiple pages</li>
+<li>Lead-generation structure</li>
+<li>Mobile optimization</li>
+<li>SEO foundation</li>
+<li>Launch support</li>
+
+</ul>
+
+<a
+class="btn btn-primary"
+target="_blank"
+href="https://wa.me/93789155454?text=Hello%20Shuaib%2C%20I%27m%20interested%20in%20the%20Business%20package."
+>
+Start a Project
+</a>
+
+</div>
+
+
+<!-- PREMIUM -->
+
+<div class="price-card">
+
+<div class="price-label">
+Premium
+</div>
+
+<div class="price">
+$5,000+
+<small>starting</small>
+</div>
+
+<p class="price-description">
+For larger brands, ecommerce and custom digital builds.
+</p>
+
+<ul class="features">
+
+<li>Advanced custom experience</li>
+<li>Shopify / ecommerce</li>
+<li>Custom integrations</li>
+<li>Conversion optimization</li>
+<li>Priority communication</li>
+<li>Launch support</li>
+
+</ul>
+
+<a
+class="btn btn-secondary"
+target="_blank"
+href="https://wa.me/93789155454?text=Hello%20Shuaib%2C%20I%27m%20interested%20in%20a%20Premium%20project."
+>
+Discuss Premium
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
 
-<section id="contact">
-    <div class="container">
 
-        <div class="section-title reveal">
-            <h2>Let's Build Something</h2>
-            <p>
-                Have a project idea? Send the details and let's discuss
-                how it can be built.
-            </p>
-        </div>
+<!-- ================= FAQ ================= -->
 
-        <div class="contact-grid">
+<section id="faq">
 
-            <div class="contact-info reveal">
+<div class="container">
 
-                <div class="contact-item">
-                    <span>Developer</span>
-                    <strong>Shoaib | Web & AI Developer</strong>
-                </div>
+<div class="section-head">
 
-                <div class="contact-item">
-                    <span>WhatsApp</span>
-                    <strong>+93 789 155 454</strong>
-                </div>
+<div class="kicker">
+FAQ
+</div>
 
-                <div class="contact-item">
-                    <span>Availability</span>
-                    <strong>International Projects</strong>
-                </div>
+<h2>
+Questions before starting.
+</h2>
 
-                <a
-                    href="https://wa.me/93789155454?text=Hello%20Shoaib%2C%20I%27d%20like%20to%20discuss%20a%20project."
-                    target="_blank"
-                    class="btn btn-whatsapp"
-                >
-                    💬 Contact Me on WhatsApp
-                </a>
+</div>
 
-            </div>
 
-            <div class="card reveal">
+<div class="faq">
 
-                <form id="projectForm">
 
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="Your Name"
-                        required
-                    >
+<details>
 
-                    <input
-                        type="text"
-                        id="company"
-                        placeholder="Company Name"
-                    >
+<summary>
+Do you work with international clients?
+</summary>
 
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Your Email"
-                        required
-                    >
+<p>
+Yes. Projects can be handled remotely through
+WhatsApp, email and online meetings.
+</p>
 
-                    <select id="projectType" required>
-                        <option value="">Select Project Type</option>
-                        <option>Business Website</option>
-                        <option>Web Application</option>
-                        <option>AI Solution</option>
-                        <option>AI Automation</option>
-                        <option>SaaS Platform</option>
-                        <option>Dashboard</option>
-                        <option>Enterprise Platform</option>
-                        <option>Other</option>
-                    </select>
+</details>
 
-                    <select id="budget">
-                        <option value="">Estimated Budget</option>
-                        <option>Under $1,000</option>
-                        <option>$1,000 - $5,000</option>
-                        <option>$5,000 - $10,000</option>
-                        <option>$10,000 - $50,000</option>
-                        <option>$50,000+</option>
-                        <option>Not sure yet</option>
-                    </select>
 
-                    <textarea
-                        id="details"
-                        placeholder="Tell me about your project..."
-                        required
-                    ></textarea>
+<details>
 
-                    <button type="submit" class="btn btn-primary">
-                        Send Project Request
-                    </button>
+<summary>
+How long does a website take?
+</summary>
 
-                </form>
+<p>
+The timeline depends on the project scope.
+A focused website generally takes less time than
+a larger ecommerce or custom project.
+</p>
 
-            </div>
+</details>
 
-        </div>
-    </div>
+
+<details>
+
+<summary>
+Can you redesign my existing website?
+</summary>
+
+<p>
+Yes. Send the current website and explain what
+you want to improve, and the project scope can be discussed.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Do you build Shopify stores?
+</summary>
+
+<p>
+Yes. Shopify design, customization and
+ecommerce-focused improvements are available.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+How do I request a quote?
+</summary>
+
+<p>
+Click the WhatsApp button and send your business type,
+website link if available, what you need and your approximate budget.
+</p>
+
+</details>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="cta" id="contact">
+
+<div class="container">
+
+<div class="kicker">
+Let's Work Together
+</div>
+
+<h2>
+Let's build something
+<br>
+<span class="gold">
+worth clicking.
+</span>
+</h2>
+
+<p>
+Tell me what your business does, what you want to improve
+and what you want your website to achieve.
+</p>
+
+
+<div class="buttons">
+
+<a
+class="btn btn-primary"
+target="_blank"
+href="https://wa.me/93789155454?text=Hello%20Shuaib%2C%20I%27d%20like%20a%20website%20quote.%0A%0ABusiness%3A%20%0AWebsite%3A%20%0AWhat%20I%20need%3A%20%0ABudget%3A%20"
+>
+WhatsApp for a Quote →
+</a>
+
+
+<a
+class="btn btn-secondary"
+href="mailto:janm62274@gmail.com?subject=Website%20Project%20Inquiry"
+>
+Email Me
+</a>
+
+</div>
+
+
+<div class="contact-details">
+
+<span>
+📱 +93 789 155 454
+</span>
+
+<span>
+✉️ janm62274@gmail.com
+</span>
+
+</div>
+
+</div>
+
 </section>
 
 </main>
 
-<a
-    class="whatsapp-float"
-    href="https://wa.me/93789155454?text=Hello%20Shoaib%2C%20I%27m%20interested%20in%20your%20services."
-    target="_blank"
-    aria-label="WhatsApp"
->
-    💬
-</a>
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
-    <div class="container">
-        <p>
-            © <span id="year"></span> Shoaib | Web & AI Developer. All rights reserved.
-        </p>
-    </div>
+
+<div class="container">
+
+<div class="footer-flex">
+
+<div>
+© <span id="year"></span> SHUAIB. All rights reserved.
+</div>
+
+<div>
+Web Design • Shopify • Digital Experiences
+</div>
+
+</div>
+
+</div>
+
 </footer>
 
+
+<!-- WHATSAPP FLOAT -->
+
+<a
+class="whatsapp"
+target="_blank"
+aria-label="Chat on WhatsApp"
+href="https://wa.me/93789155454?text=Hello%20Shuaib%2C%20I%27d%20like%20to%20discuss%20a%20project."
+>
+☎
+</a>
+
+
 <script>
-/* =========================
-   MOBILE MENU
-========================= */
 
-const menu = document.getElementById("menu");
-const navLinks = document.getElementById("navLinks");
-
-menu.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-    });
-});
-
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-const revealElements = document.querySelectorAll(".reveal");
-
-const observer = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add("show");
-            }
-        });
-    },
-    {
-        threshold:0.12
-    }
-);
-
-revealElements.forEach(element => {
-    observer.observe(element);
-});
-
-
-/* =========================
-   PROJECT FORM
-   Opens WhatsApp with project
-   details automatically.
-========================= */
-
-const form = document.getElementById("projectForm");
-
-form.addEventListener("submit", function(event){
-
-    event.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const company = document.getElementById("company").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const projectType = document.getElementById("projectType").value;
-    const budget = document.getElementById("budget").value;
-    const details = document.getElementById("details").value.trim();
-
-    const message =
-`Hello Shoaib,
-
-I would like to discuss a project.
-
-Name: ${name}
-Company: ${company || "Not provided"}
-Email: ${email}
-Project Type: ${projectType}
-Budget: ${budget || "Not provided"}
-
-Project Details:
-${details}
-
-I found your portfolio and would like to discuss the project with you.`;
-
-    const whatsappURL =
-        "https://wa.me/93789155454?text=" +
-        encodeURIComponent(message);
-
-    window.open(whatsappURL, "_blank");
-});
-
-
-/* =========================
-   CURRENT YEAR
-========================= */
+/* YEAR */
 
 document.getElementById("year").textContent =
-    new Date().getFullYear();
+new Date().getFullYear();
+
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList
+.toggle("open");
+
+}
+
+
+/* CLOSE MENU */
+
+document
+.querySelectorAll("#navLinks a")
+.forEach(function(link){
+
+link.addEventListener("click",function(){
+
+document
+.getElementById("navLinks")
+.classList
+.remove("open");
+
+});
+
+});
+
 </script>
 
 </body>
